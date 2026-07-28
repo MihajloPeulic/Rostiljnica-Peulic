@@ -1,0 +1,380 @@
+export default function AboutPage() {
+  return (
+    <main className="min-h-screen bg-[#09090b] text-white">
+
+      <section className="pt-32 pb-32">
+
+        <div className="container-page">
+
+
+          {/* HERO */}
+
+          <div className="text-center max-w-4xl mx-auto reveal">
+
+
+            <p className="
+              uppercase
+              tracking-[0.5em]
+              text-amber-400
+            ">
+              O nama
+            </p>
+
+
+            <h1 className="
+              heading
+              text-5xl
+              md:text-7xl
+              mt-6
+            ">
+              Tradicija ukusa i kvaliteta
+            </h1>
+
+
+            <p className="
+              mt-8
+              text-zinc-400
+              text-lg
+              leading-8
+            ">
+              Roštiljnica Peulić je mjesto gdje se tradicionalna kuhinja,
+              kvalitetni sastojci i domaća atmosfera spajaju u jedno.
+              Naš cilj je da svaki gost ode zadovoljan i da se uvijek vraća.
+            </p>
+
+
+          </div>
+
+
+
+
+
+          {/* STORY */}
+
+          <div className="
+            mt-24
+            grid
+            lg:grid-cols-2
+            gap-12
+            items-center
+          ">
+
+
+            <div className="
+              rounded-[40px]
+              overflow-hidden
+              border
+              border-white/10
+              h-[500px]
+            ">
+
+              <img
+                src="/images/gornji_sprat.png"
+                alt="Roštiljnica Peulić"
+                className="
+                  w-full
+                  h-full
+                  object-cover
+                "
+              />
+
+            </div>
+
+
+
+
+
+            <div>
+
+
+              <p className="
+                uppercase
+                tracking-[0.4em]
+                text-amber-400
+              ">
+                Naša priča
+              </p>
+
+
+
+              <h2 className="
+                heading
+                text-4xl
+                mt-5
+              ">
+                Više od običnog restorana
+              </h2>
+
+
+
+              <p className="
+                mt-6
+                text-zinc-400
+                leading-8
+              ">
+                Godinama pripremamo jela po provjerenim receptima,
+                sa posebnim fokusom na kvalitet mesa, svježe namirnice
+                i pažljivu pripremu svakog obroka.
+              </p>
+
+
+
+              <p className="
+                mt-5
+                text-zinc-400
+                leading-8
+              ">
+                Bilo da dolazite na brz ručak, porodično okupljanje
+                ili druženje sa prijateljima, želimo da svaki trenutak
+                kod nas bude poseban.
+              </p>
+
+
+
+            </div>
+
+
+          </div>
+
+
+
+
+
+
+
+          {/* VALUES */}
+
+          <div className="
+            mt-32
+            grid
+            md:grid-cols-3
+            gap-8
+          ">
+
+
+            <div className="
+              rounded-[32px]
+              border
+              border-white/10
+              bg-white/5
+              p-8
+            ">
+
+              <div className="
+                w-14
+                h-14
+                rounded-2xl
+                bg-amber-500
+                text-black
+                flex
+                items-center
+                justify-center
+                text-2xl
+              ">
+                🥩
+              </div>
+
+
+              <h3 className="
+                mt-6
+                text-2xl
+                font-semibold
+              ">
+                Kvalitet
+              </h3>
+
+
+              <p className="
+                mt-4
+                text-zinc-400
+                leading-7
+              ">
+                Biramo kvalitetne sastojke i pripremamo svako jelo
+                sa posebnom pažnjom.
+              </p>
+
+
+            </div>
+
+
+
+
+
+
+            <div className="
+              rounded-[32px]
+              border
+              border-white/10
+              bg-white/5
+              p-8
+            ">
+
+              <div className="
+                w-14
+                h-14
+                rounded-2xl
+                bg-amber-500
+                text-black
+                flex
+                items-center
+                justify-center
+                text-2xl
+              ">
+                🔥
+              </div>
+
+
+              <h3 className="
+                mt-6
+                text-2xl
+                font-semibold
+              ">
+                Tradicija
+              </h3>
+
+
+              <p className="
+                mt-4
+                text-zinc-400
+                leading-7
+              ">
+                Spoj domaćih ukusa i tradicionalne pripreme
+                koju naši gosti prepoznaju.
+              </p>
+
+
+            </div>
+
+
+
+
+
+
+
+            <div className="
+              rounded-[32px]
+              border
+              border-white/10
+              bg-white/5
+              p-8
+            ">
+
+              <div className="
+                w-14
+                h-14
+                rounded-2xl
+                bg-amber-500
+                text-black
+                flex
+                items-center
+                justify-center
+                text-2xl
+              ">
+                🤝
+              </div>
+
+
+              <h3 className="
+                mt-6
+                text-2xl
+                font-semibold
+              ">
+                Gostoprimstvo
+              </h3>
+
+
+              <p className="
+                mt-4
+                text-zinc-400
+                leading-7
+              ">
+                Važno nam je da se svaki gost osjeća prijatno
+                i poželjno.
+              </p>
+
+
+            </div>
+
+
+          </div>
+
+
+
+
+
+
+          {/* FINAL */}
+
+          <div className="
+            mt-32
+            rounded-[40px]
+            overflow-hidden
+            relative
+            h-[450px]
+          ">
+
+
+            <img
+              src="/images/hero_img1.jpg"
+              alt="Roštiljnica"
+              className="
+                absolute
+                inset-0
+                w-full
+                h-full
+                object-cover
+              "
+            />
+
+
+            <div className="
+              absolute
+              inset-0
+              bg-black/70
+            "/>
+
+
+            <div className="
+              relative
+              h-full
+              flex
+              flex-col
+              justify-center
+              items-center
+              text-center
+              px-6
+            ">
+
+
+              <h2 className="
+                heading
+                text-5xl
+              ">
+                Vidimo se za stolom
+              </h2>
+
+
+              <p className="
+                mt-5
+                text-zinc-300
+                text-lg
+              ">
+                Dođite i uvjerite se zašto nam se gosti vraćaju.
+              </p>
+
+
+            </div>
+
+
+          </div>
+
+
+
+        </div>
+
+      </section>
+
+
+    </main>
+  );
+}
