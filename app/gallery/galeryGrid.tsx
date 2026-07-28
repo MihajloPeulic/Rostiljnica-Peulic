@@ -32,7 +32,6 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
             key={index}
             onClick={() => setSelectedImage(image)}
             className={`
-              reveal
               overflow-hidden
               rounded-[32px]
               border

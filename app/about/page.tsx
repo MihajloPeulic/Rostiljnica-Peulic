@@ -9,41 +9,50 @@ export default function AboutPage() {
 
           {/* HERO */}
 
-          <div className="text-center max-w-4xl mx-auto reveal">
+          <div className="text-center max-w-4xl mx-auto">
+
+  <p
+    className="
+      fade-up
+      uppercase
+      tracking-[0.5em]
+      text-amber-400
+    "
+  >
+    O nama
+  </p>
 
 
-            <p className="
-              uppercase
-              tracking-[0.5em]
-              text-amber-400
-            ">
-              O nama
-            </p>
+  <h1
+    className="
+      fade-up
+      delay1
+      heading
+      text-5xl
+      md:text-7xl
+      mt-6
+    "
+  >
+    Tradicija ukusa i kvaliteta
+  </h1>
 
 
-            <h1 className="
-              heading
-              text-5xl
-              md:text-7xl
-              mt-6
-            ">
-              Tradicija ukusa i kvaliteta
-            </h1>
+  <p
+    className="
+      fade-up
+      delay2
+      mt-8
+      text-zinc-400
+      text-lg
+      leading-8
+    "
+  >
+    Roštiljnica Peulić je mjesto gdje se tradicionalna kuhinja,
+    kvalitetni sastojci i domaća atmosfera spajaju u jedno.
+    Naš cilj je da svaki gost ode zadovoljan i da se uvijek vraća.
+  </p>
 
-
-            <p className="
-              mt-8
-              text-zinc-400
-              text-lg
-              leading-8
-            ">
-              Roštiljnica Peulić je mjesto gdje se tradicionalna kuhinja,
-              kvalitetni sastojci i domaća atmosfera spajaju u jedno.
-              Naš cilj je da svaki gost ode zadovoljan i da se uvijek vraća.
-            </p>
-
-
-          </div>
+</div>
 
 
 

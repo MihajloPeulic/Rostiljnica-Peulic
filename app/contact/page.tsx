@@ -14,15 +14,15 @@ export default function ContactPage() {
 
           <div className="text-center mb-16">
 
-            <p className="uppercase tracking-[0.5em] text-amber-400">
+            <p className="fade-up uppercase tracking-[0.5em] text-amber-400">
               Kontakt
             </p>
 
-            <h1 className="heading text-5xl md:text-7xl mt-6">
+            <h1 className="fade-up delay1 heading text-5xl md:text-7xl mt-6">
               Kontaktirajte nas
             </h1>
 
-            <p className="mt-6 text-zinc-400 max-w-2xl mx-auto text-lg">
+            <p className="fade-up delay2 mt-6 text-zinc-400 max-w-2xl mx-auto text-lg">
               Rezervišite sto ili nam pošaljite poruku.
               Biće nam zadovoljstvo da vas ugostimo.
             </p>

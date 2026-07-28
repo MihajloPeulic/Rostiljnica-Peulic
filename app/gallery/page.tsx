@@ -24,24 +24,50 @@ export default function GalleryPage() {
         <div className="container-page">
 
 
-          <div className="text-center mb-20 reveal">
+          <div className="text-center mb-20">
 
-            <p className="uppercase tracking-[0.5em] text-amber-400">
-              Galerija
-            </p>
+  <p
+    className="
+      fade-up
+      uppercase
+      tracking-[0.5em]
+      text-amber-400
+    "
+  >
+    Galerija
+  </p>
 
 
-            <h1 className="heading text-5xl md:text-7xl mt-6">
-              Ukusi i atmosfera
-            </h1>
+  <h1
+    className="
+      fade-up
+      delay1
+      heading
+      text-5xl
+      md:text-7xl
+      mt-6
+    "
+  >
+    Ukusi i atmosfera
+  </h1>
 
 
-            <p className="mt-6 max-w-2xl mx-auto text-zinc-400 text-lg">
-              Pogledajte djelić naše kuhinje, specijaliteta i ambijenta
-              u kojem nastaju nezaboravni trenuci.
-            </p>
+  <p
+    className="
+      fade-up
+      delay2
+      mt-6
+      max-w-2xl
+      mx-auto
+      text-zinc-400
+      text-lg
+    "
+  >
+    Pogledajte djelić naše kuhinje, specijaliteta i ambijenta
+    u kojem nastaju nezaboravni trenuci.
+  </p>
 
-          </div>
+</div>
 
 
 

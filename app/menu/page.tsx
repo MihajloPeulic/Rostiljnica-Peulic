@@ -326,19 +326,48 @@ export default function MenuPage() {
         <div className="container-page max-w-6xl">
 
           <div className="mb-20 text-center">
-            <p className="uppercase tracking-[0.5em] text-amber-400">
-              Roštiljnica Peulić
-            </p>
 
-            <h1 className="heading mt-6 text-5xl md:text-6xl">
-              Jelovnik
-            </h1>
+  <p
+    className="
+      fade-up
+      uppercase
+      tracking-[0.5em]
+      text-amber-400
+    "
+  >
+    Roštiljnica Peulić
+  </p>
 
-            <p className="mx-auto mt-6 max-w-2xl text-zinc-400">
-              Tradicionalna jela, specijaliteti sa roštilja i domaća kuhinja
-              pripremljeni od pažljivo odabranih namirnica.
-            </p>
-          </div>
+
+  <h1
+    className="
+      fade-up
+      delay1
+      heading
+      mt-6
+      text-5xl
+      md:text-6xl
+    "
+  >
+    Jelovnik
+  </h1>
+
+
+  <p
+    className="
+      fade-up
+      delay2
+      mx-auto
+      mt-6
+      max-w-2xl
+      text-zinc-400
+    "
+  >
+    Tradicionalna jela, specijaliteti sa roštilja i domaća kuhinja
+    pripremljeni od pažljivo odabranih namirnica.
+  </p>
+
+</div>
 
           <div className="space-y-12">
             {menu.map((section) => (

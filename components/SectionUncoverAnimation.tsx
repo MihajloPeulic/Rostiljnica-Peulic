@@ -1,8 +1,12 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function RevealObserver() {
+
+  const pathname = usePathname();
+
 
   useEffect(() => {
 
@@ -14,8 +18,9 @@ export default function RevealObserver() {
 
         entries.forEach((entry) => {
 
-          if(entry.isIntersecting){
+          if (entry.isIntersecting) {
             entry.target.classList.add("active");
+            observer.unobserve(entry.target);
           }
 
         });
@@ -27,7 +32,7 @@ export default function RevealObserver() {
     );
 
 
-    elements.forEach((el)=>{
+    elements.forEach((el) => {
       observer.observe(el);
     });
 
@@ -37,7 +42,7 @@ export default function RevealObserver() {
     };
 
 
-  }, []);
+  }, [pathname]);
 
 
   return null;
