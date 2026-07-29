@@ -109,6 +109,10 @@ export const menu = [
         description: "180 g",
       },
       {
+        name: "Gurmanska pljeskavica",
+        description: "meso, edamer sir, slanina - 180 g",
+      },
+      {
         name: "Kobasica roštiljska",
         description: "250 g",
       },

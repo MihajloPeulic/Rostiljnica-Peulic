@@ -4,15 +4,21 @@ import GalleryGrid from "./galeryGrid";
 
 const images = [
   "/images/batak.png",
-  "/images/cevapi.png",
-  "/images/gornji_sprat.png",
+  "/images/vina_bg.png",
   "/images/hero_img1.jpg",
+  "/images/gornji_sprat.png",
+  "/images/cevapi.png",
   "/images/plata_za_troje.png",
+  "/images/basta.png",
   "/images/poh_pile.png",
   "/images/riblji_stapici.png",
-  "/images/vjesalice.png"
+   "/images/unutra1.png",
+  "/images/vjesalice.png",
+  "/images/koljenica.png",
+  "/images/plata.png",
+  "/images/unutra2.png",
+  
 ];
-
 
 export default function GalleryPage() {
   return (

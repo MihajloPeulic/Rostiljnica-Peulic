@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -11,17 +12,31 @@ export default function Footer() {
 
           {/* BRAND */}
 
-          <div>
+<div>
 
-            <h2 className="heading text-4xl">
-              Roštiljnica Peulić
-            </h2>
+  <Image
+    src="/images/logo_nav.png"
+    alt="Roštiljnica Peulić logo"
+    width={70}
+    height={70}
+    className="
+      object-contain
+      -rotate-10
+      mb-4
+    "
+  />
 
-            <p className="mt-5 text-zinc-500">
-              Mjesto za dobru hranu i prijatno druženje.
-            </p>
 
-          </div>
+  <h2 className="heading text-4xl">
+    Roštiljnica Peulić
+  </h2>
+
+
+  <p className="mt-5 text-zinc-500">
+    Mjesto za dobru hranu i prijatno druženje.
+  </p>
+
+</div>
 
 
 
@@ -43,21 +58,21 @@ export default function Footer() {
               </Link>
 
               <Link
-                href="/meni"
+                href="/menu"
                 className="block hover:text-amber-400 transition"
               >
                 Meni
               </Link>
 
               <Link
-                href="/galerija"
+                href="/gallery"
                 className="block hover:text-amber-400 transition"
               >
                 Galerija
               </Link>
 
               <Link
-                href="/kontakt"
+                href="/contact"
                 className="block hover:text-amber-400 transition"
               >
                 Kontakt
@@ -82,7 +97,7 @@ export default function Footer() {
             <div className="space-y-3 text-zinc-400">
 
               <p>
-                +387 65 000 000
+                +387 51 663 456
               </p>
 
               <p>

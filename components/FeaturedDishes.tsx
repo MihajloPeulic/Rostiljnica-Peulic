@@ -1,4 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
+
+import ButtonLink from "./ButtonLink";
 
 export default function FeaturedDishes() {
   const dishes = [
@@ -6,24 +9,21 @@ export default function FeaturedDishes() {
       name: "Ćevapi",
       description:
         "Domaći ćevapi sa roštilja, savršenog ukusa zahvaljujući pažljivo biranim sastojcima.",
-      image:
-        "/images/cevapi.png",
+      image: "/images/cevapi.png",
     },
 
     {
-      name: "Ćevapi",
+      name: "Koljenica",
       description:
-        "Tradicionalni specijalitet sa roštilja pripremljen svakog dana.",
-      image:
-        "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=900&q=80",
+        "Sočna svinjska koljenica, sporo kuvana do savršenstva i servirana uz domaće priloge.",
+     image:"/images/koljenica.png"
     },
 
     {
-      name: "Gourmet Burger",
+      name: "Plata za troje",
       description:
-        "Sočan burger sa kvalitetnim sastojcima i domaćim sosom.",
-      image:
-        "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80",
+        "Kombinacija pažljivo odabranih roštiljskih specijaliteta i domaćih priloga, idealna za zajedničko uživanje.",
+      image:"/images/plata.png"
     },
   ];
 
@@ -34,146 +34,131 @@ export default function FeaturedDishes() {
       <div className="max-w-7xl mx-auto px-6">
 
 
-        <div className="
-          flex
-          flex-col
-          md:flex-row
-          justify-between
-          items-end
-          gap-6
-          mb-16
-        ">
+        {/* HEADER */}
 
+        <div
+          className="
+            flex
+            flex-col
+            items-center
+            justify-center
+            text-center
+            gap-6
+            mb-16
+          "
+        >
 
-          <div>
-
-            <p className="
+          <p
+            className="
               uppercase
               tracking-[0.5em]
               text-amber-400
-            ">
-              Naši specijaliteti
-            </p>
-
-
-            <h2 className="
-              font-heading
-              text-5xl
-              mt-5
-            ">
-              Favoriti kuće
-            </h2>
-
-          </div>
-
-
-
-          <a
-            href="#"
-            className="
-            cursor-pointer
-            text-amber-400
-            hover:text-amber-300
-            transition
             "
           >
-            Pogledaj cijeli meni →
-          </a>
+            Naši specijaliteti
+          </p>
 
+
+          <h2
+            className="
+              font-heading
+              text-5xl
+              mt-2
+            "
+          >
+            Favoriti kuće
+          </h2>
 
         </div>
 
 
 
 
-        <div className="
-          grid
-          md:grid-cols-3
-          gap-10
-        ">
 
+        {/* DISHES */}
+
+        <div
+          className="
+            grid
+            md:grid-cols-3
+            gap-10
+          "
+        >
 
           {dishes.map((dish) => (
 
             <div
-  key={dish.name}
-  className="
-  group
-  relative
-  h-[420px]
-  rounded-3xl
-  overflow-hidden
-  bg-zinc-900
-  "
->
-  <Image
-  src={dish.image}
-  alt={dish.name}
-  fill
-  className="
-  object-cover
-  group-hover:scale-110
-  transition
-  duration-700
-  "
-/>
+              key={dish.name}
+              className="
+                group
+                relative
+                h-[420px]
+                rounded-3xl
+                overflow-hidden
+                bg-zinc-900
+              "
+            >
 
-
-  <div
-    className="
-    absolute
-    inset-0
-    bg-gradient-to-t
-    from-black
-    via-black/30
-    to-transparent
-    "
-  />
-
-
-  <div
-    className="
-    absolute
-    bottom-0
-    p-8
-    "
-  >
-
-    <div
-      className="
-      flex
-      justify-between
-      items-center
-      gap-4
-      "
-    >
-
-      <h3
-        className="
-        font-heading
-        text-3xl
-        "
-      >
-        {dish.name}
-      </h3>
+              <Image
+                src={dish.image}
+                alt={dish.name}
+                fill
+                className="
+                  object-cover
+                  group-hover:scale-110
+                  transition
+                  duration-700
+                "
+              />
 
 
 
-    </div>
+              <div
+                className="
+                  absolute
+                  inset-0
+                  bg-gradient-to-t
+                  from-black
+                  via-black/30
+                  to-transparent
+                "
+              />
 
 
-    <p
-      className="
-      text-zinc-300
-      mt-3
-      "
-    >
-      {dish.description}
-    </p>
 
-  </div>
+              <div
+                className="
+                  absolute
+                  bottom-0
+                  p-8
+                "
+              >
 
-</div>
+                <h3
+                  className="
+                    font-heading
+                    text-3xl
+                  "
+                >
+                  {dish.name}
+                </h3>
+
+
+
+                <p
+                  className="
+                    text-zinc-300
+                    mt-3
+                  "
+                >
+                  {dish.description}
+                </p>
+
+
+              </div>
+
+
+            </div>
 
           ))}
 
@@ -181,7 +166,77 @@ export default function FeaturedDishes() {
         </div>
 
 
+
+
+
+        {/* MENU BUTTON */}
+
+        <div
+          className="
+            mt-16
+            flex
+            justify-center
+          "
+        >
+
+          <ButtonLink
+            href="/menu"
+            text="Pogledaj meni"
+            className="
+              group
+              cursor-pointer
+              inline-flex
+              items-center
+              justify-center
+              gap-4
+              rounded-full
+              border
+              border-amber-400/40
+              bg-amber-500
+              px-10
+              py-5
+              text-xs
+              uppercase
+              tracking-[0.25em]
+              font-semibold
+              text-black
+              transition
+              duration-300
+              hover:bg-amber-400
+              hover:scale-105
+              hover:-translate-y-1
+            " 
+            icon={
+              <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.8"
+                stroke="currentColor"
+                className="w-5 h-5 shrink-0"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M9 5h6M9 9h6M9 13h6M9 17h3"
+                />
+
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6.75 3.75h10.5A1.75 1.75 0 0119 5.5v13a1.75 1.75 0 01-1.75 1.75H6.75A1.75 1.75 0 015 18.5v-13a1.75 1.75 0 011.75-1.75z"
+                />
+              </svg>
+            </span>
+            } />
+
+
+        </div>
+
+
       </div>
+
 
     </section>
   );

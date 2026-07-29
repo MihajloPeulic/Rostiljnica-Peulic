@@ -1,4 +1,6 @@
 import Image from "next/image";
+import ButtonLink from "./ButtonLink";
+
 
 export default function Hero() {
   return (
@@ -123,28 +125,102 @@ export default function Hero() {
 
 
         <div
-          className="
-          fade-up
-          delay3
-          mt-10
-          flex
-          flex-col
-          sm:flex-row
-          gap-5
-          justify-center
-          "
-        >
+  className="
+    fade-up
+    delay3
+    mt-10
+    flex
+    flex-col
+    sm:flex-row
+    gap-5
+    justify-center
+  "
+>
 
-          <button className="cursor-pointer btn-primary glow">
-            Pogledaj meni
-          </button>
+  <ButtonLink
+    href="/menu"
+    text="Pogledaj meni"
+    className="
+      group
+      cursor-pointer
+      btn-primary
+      glow
+      inline-flex
+      items-center
+      justify-center
+      gap-3
+      text-xs
+      uppercase
+      tracking-[0.25em]
+      transition
+      duration-300
+      hover:scale-105
+      hover:-translate-y-1
+    "
+    icon={
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth="1.8"
+        stroke="currentColor"
+        className="w-4 h-4 shrink-0"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M9 5h6M9 9h6M9 13h6M9 17h3"
+        />
+
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M6.75 3.75h10.5A1.75 1.75 0 0119 5.5v13a1.75 1.75 0 01-1.75 1.75H6.75A1.75 1.75 0 015 18.5v-13a1.75 1.75 0 011.75-1.75z"
+        />
+      </svg>
+    }
+  />
 
 
-          <button className="cursor-pointer btn-secondary">
-            Rezerviši sto
-          </button>
 
-        </div>
+  <ButtonLink
+    href="/contact"
+    text="Rezerviši sto"
+    className="
+      group
+      cursor-pointer
+      btn-secondary
+      inline-flex
+      items-center
+      justify-center
+      gap-3
+      text-xs
+      uppercase
+      tracking-[0.25em]
+      transition
+      duration-300
+      hover:scale-105
+      hover:-translate-y-1
+    "
+    icon={
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth="2"
+        stroke="currentColor"
+        className="w-4 h-4 shrink-0"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
+      </svg>
+    }
+  />
+
+</div>
 
 
 
@@ -153,15 +229,15 @@ export default function Hero() {
 
         <div
           className="
-          mt-14
-          sm:mt-20
-          grid
-          grid-cols-1
-          sm:grid-cols-3
-          gap-5
-          sm:gap-8
+            mt-14
+            sm:mt-20
+            grid
+            grid-cols-1
+            md:grid-cols-3
+            gap-5
+            md:gap-8
           "
-        >
+>
 
           <div className="glass-card p-6 sm:p-8">
 
@@ -215,7 +291,7 @@ export default function Hero() {
               text-amber-400
               "
             >
-              4.9★
+              4.6★
             </div>
 
             <div className="mt-3 text-zinc-400">

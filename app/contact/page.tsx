@@ -1,4 +1,6 @@
 
+import ContactForm from "@/components/ContactForm";
+
 
 export default function ContactPage() {
   return (
@@ -172,7 +174,7 @@ export default function ContactPage() {
           {/* FORM */}
 
 
-          <div className="
+          <div  className="
             rounded-[40px]
             border
             border-white/10
@@ -192,81 +194,7 @@ export default function ContactPage() {
 
 
 
-              <form className="mt-8 space-y-6">
-
-
-                <div className="grid md:grid-cols-2 gap-6">
-
-
-                  <input
-                    placeholder="Ime"
-                    className="
-                      rounded-2xl
-                      bg-black/40
-                      border
-                      border-white/10
-                      px-5
-                      py-4
-                      outline-none
-                      focus:border-amber-400
-                    "
-                  />
-
-
-
-                  <input
-                    placeholder="Email"
-                    className="
-                      rounded-2xl
-                      bg-black/40
-                      border
-                      border-white/10
-                      px-5
-                      py-4
-                      outline-none
-                      focus:border-amber-400
-                    "
-                  />
-
-
-                </div>
-
-
-
-                <textarea
-                  rows={5}
-                  placeholder="Vaša poruka..."
-                  className="
-                    w-full
-                    rounded-2xl
-                    bg-black/40
-                    border
-                    border-white/10
-                    px-5
-                    py-4
-                    outline-none
-                    focus:border-amber-400
-                  "
-                />
-
-
-                <button
-                  className="
-                    w-full
-                    bg-amber-500
-                    text-black
-                    py-4
-                    rounded-full
-                    font-semibold
-                    hover:scale-[1.02]
-                    transition
-                  "
-                >
-                  Pošalji poruku
-                </button>
-
-
-              </form>
+              <ContactForm></ContactForm>
 
 
             </div>
@@ -307,3 +235,7 @@ export default function ContactPage() {
     </main>
   );
 }
+
+
+
+

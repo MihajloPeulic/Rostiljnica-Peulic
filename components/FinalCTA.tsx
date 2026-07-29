@@ -1,39 +1,83 @@
+import Link from "next/link";
+import ButtonLink from "./ButtonLink";
+
 export default function FinalCTA() {
   return (
     <section className="relative py-40 overflow-hidden reveal">
       <img
-        src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1800&q=80"
+        src="/images/vina_bg.png"
         alt="Restaurant food"
         className="absolute inset-0 w-full h-full object-cover"
       />
 
       <div className="absolute inset-0 bg-black/75" />
 
+
       <div className="relative max-w-4xl mx-auto text-center px-6">
+
         <p className="uppercase tracking-[0.5em] text-amber-400">
           Rezerviši danas
         </p>
+
 
         <h2 className="font-heading text-7xl mt-8">
           Vidimo se za stolom
         </h2>
 
-        <button
-          className="
-            mt-12
-            bg-amber-500
-            text-black
-            px-12
-            py-5
-            rounded-full
-            text-lg
-            font-semibold
-            hover:scale-110
-            transition
-          "
-        >
-          Rezerviši sto
-        </button>
+
+       <ButtonLink
+  href="/contact"
+  text="Rezerviši sto"
+  className="
+    group
+    cursor-pointer
+    mt-12
+    inline-flex
+    items-center
+    justify-center
+    gap-4
+    rounded-full
+    border
+    border-amber-400/40
+    bg-amber-500
+    px-10
+    py-5
+    text-xs
+    uppercase
+    tracking-[0.25em]
+    font-semibold
+    text-black
+    transition
+    duration-300
+    hover:bg-amber-400
+    hover:scale-105
+    hover:-translate-y-1
+  "
+  icon={
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth="2"
+      stroke="black"
+      className="w-5 h-5 shrink-0"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M8.25 6.75h7.5a3 3 0 013 3v7.5a3 3 0 01-3 3h-7.5a3 3 0 01-3-3v-7.5a3 3 0 013-3z"
+      />
+
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M8.25 10.5h7.5M8.25 14h4.5"
+      />
+    </svg>
+  }
+/>
+
+
       </div>
     </section>
   );

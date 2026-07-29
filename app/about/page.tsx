@@ -11,48 +11,48 @@ export default function AboutPage() {
 
           <div className="text-center max-w-4xl mx-auto">
 
-  <p
-    className="
-      fade-up
-      uppercase
-      tracking-[0.5em]
-      text-amber-400
-    "
-  >
-    O nama
-  </p>
+            <p
+              className="
+                fade-up
+                uppercase
+                tracking-[0.5em]
+                text-amber-400
+              "
+            >
+              O nama
+            </p>
 
 
-  <h1
-    className="
-      fade-up
-      delay1
-      heading
-      text-5xl
-      md:text-7xl
-      mt-6
-    "
-  >
-    Tradicija ukusa i kvaliteta
-  </h1>
+            <h1
+              className="
+                fade-up
+                delay1
+                heading
+                text-5xl
+                md:text-7xl
+                mt-6
+              "
+            >
+              Tradicija ukusa i kvaliteta
+            </h1>
 
 
-  <p
-    className="
-      fade-up
-      delay2
-      mt-8
-      text-zinc-400
-      text-lg
-      leading-8
-    "
-  >
-    Roštiljnica Peulić je mjesto gdje se tradicionalna kuhinja,
-    kvalitetni sastojci i domaća atmosfera spajaju u jedno.
-    Naš cilj je da svaki gost ode zadovoljan i da se uvijek vraća.
-  </p>
+            <p
+              className="
+                fade-up
+                delay2
+                mt-8
+                text-zinc-400
+                text-lg
+                leading-8
+              "
+            >
+              Roštiljnica Peulić je mjesto gdje se tradicionalna kuhinja,
+              kvalitetni sastojci i domaća atmosfera spajaju u jedno.
+              Naš cilj je da svaki gost ode zadovoljan i da se uvijek vraća.
+            </p>
 
-</div>
+          </div>
 
 
 
@@ -60,22 +60,26 @@ export default function AboutPage() {
 
           {/* STORY */}
 
-          <div className="
-            mt-24
-            grid
-            lg:grid-cols-2
-            gap-12
-            items-center
-          ">
+          <div
+            className="
+              mt-24
+              grid
+              lg:grid-cols-2
+              gap-12
+              items-center
+            "
+          >
 
 
-            <div className="
-              rounded-[40px]
-              overflow-hidden
-              border
-              border-white/10
-              h-[500px]
-            ">
+            <div
+              className="
+                rounded-[40px]
+                overflow-hidden
+                border
+                border-white/10
+                h-[500px]
+              "
+            >
 
               <img
                 src="/images/gornji_sprat.png"
@@ -93,34 +97,40 @@ export default function AboutPage() {
 
 
 
-            <div>
+            <div className="text-center lg:text-left">
 
 
-              <p className="
-                uppercase
-                tracking-[0.4em]
-                text-amber-400
-              ">
+              <p
+                className="
+                  uppercase
+                  tracking-[0.4em]
+                  text-amber-400
+                "
+              >
                 Naša priča
               </p>
 
 
 
-              <h2 className="
-                heading
-                text-4xl
-                mt-5
-              ">
+              <h2
+                className="
+                  heading
+                  text-4xl
+                  mt-5
+                "
+              >
                 Više od običnog restorana
               </h2>
 
 
 
-              <p className="
-                mt-6
-                text-zinc-400
-                leading-8
-              ">
+              <p
+                className="
+                  mt-6
+                  text-zinc-400
+                  leading-8
+                "
+              >
                 Godinama pripremamo jela po provjerenim receptima,
                 sa posebnim fokusom na kvalitet mesa, svježe namirnice
                 i pažljivu pripremu svakog obroka.
@@ -128,22 +138,24 @@ export default function AboutPage() {
 
 
 
-              <p className="
-                mt-5
-                text-zinc-400
-                leading-8
-              ">
+              <p
+                className="
+                  mt-5
+                  text-zinc-400
+                  leading-8
+                "
+              >
                 Bilo da dolazite na brz ručak, porodično okupljanje
                 ili druženje sa prijateljima, želimo da svaki trenutak
                 kod nas bude poseban.
               </p>
 
 
-
             </div>
 
 
           </div>
+
 
 
 
@@ -153,156 +165,91 @@ export default function AboutPage() {
 
           {/* VALUES */}
 
-          <div className="
-            mt-32
-            grid
-            md:grid-cols-3
-            gap-8
-          ">
+          <div
+            className="
+              mt-32
+              grid
+              md:grid-cols-3
+              gap-8
+            "
+          >
 
 
-            <div className="
-              rounded-[32px]
-              border
-              border-white/10
-              bg-white/5
-              p-8
-            ">
+            {[
+              {
+                icon: "🥩",
+                title: "Kvalitet",
+                text: "Biramo kvalitetne sastojke i pripremamo svako jelo sa posebnom pažnjom."
+              },
+              {
+                icon: "🔥",
+                title: "Tradicija",
+                text: "Spoj domaćih ukusa i tradicionalne pripreme koju naši gosti prepoznaju."
+              },
+              {
+                icon: "🤝",
+                title: "Gostoprimstvo",
+                text: "Važno nam je da se svaki gost osjeća prijatno i poželjno."
+              }
+            ].map((item) => (
 
-              <div className="
-                w-14
-                h-14
-                rounded-2xl
-                bg-amber-500
-                text-black
-                flex
-                items-center
-                justify-center
-                text-2xl
-              ">
-                🥩
+              <div
+                key={item.title}
+                className="
+                  rounded-[32px]
+                  border
+                  border-white/10
+                  bg-white/5
+                  p-8
+                  text-center
+                  md:text-left
+                "
+              >
+
+                <div
+                  className="
+                    w-14
+                    h-14
+                    mx-auto
+                    md:mx-0
+                    rounded-2xl
+                    bg-amber-500
+                    text-black
+                    flex
+                    items-center
+                    justify-center
+                    text-2xl
+                  "
+                >
+                  {item.icon}
+                </div>
+
+
+                <h3
+                  className="
+                    mt-6
+                    text-2xl
+                    font-semibold
+                  "
+                >
+                  {item.title}
+                </h3>
+
+
+                <p
+                  className="
+                    mt-4
+                    text-zinc-400
+                    leading-7
+                  "
+                >
+                  {item.text}
+                </p>
+
+
               </div>
 
-
-              <h3 className="
-                mt-6
-                text-2xl
-                font-semibold
-              ">
-                Kvalitet
-              </h3>
-
-
-              <p className="
-                mt-4
-                text-zinc-400
-                leading-7
-              ">
-                Biramo kvalitetne sastojke i pripremamo svako jelo
-                sa posebnom pažnjom.
-              </p>
-
-
-            </div>
-
-
-
-
-
-
-            <div className="
-              rounded-[32px]
-              border
-              border-white/10
-              bg-white/5
-              p-8
-            ">
-
-              <div className="
-                w-14
-                h-14
-                rounded-2xl
-                bg-amber-500
-                text-black
-                flex
-                items-center
-                justify-center
-                text-2xl
-              ">
-                🔥
-              </div>
-
-
-              <h3 className="
-                mt-6
-                text-2xl
-                font-semibold
-              ">
-                Tradicija
-              </h3>
-
-
-              <p className="
-                mt-4
-                text-zinc-400
-                leading-7
-              ">
-                Spoj domaćih ukusa i tradicionalne pripreme
-                koju naši gosti prepoznaju.
-              </p>
-
-
-            </div>
-
-
-
-
-
-
-
-            <div className="
-              rounded-[32px]
-              border
-              border-white/10
-              bg-white/5
-              p-8
-            ">
-
-              <div className="
-                w-14
-                h-14
-                rounded-2xl
-                bg-amber-500
-                text-black
-                flex
-                items-center
-                justify-center
-                text-2xl
-              ">
-                🤝
-              </div>
-
-
-              <h3 className="
-                mt-6
-                text-2xl
-                font-semibold
-              ">
-                Gostoprimstvo
-              </h3>
-
-
-              <p className="
-                mt-4
-                text-zinc-400
-                leading-7
-              ">
-                Važno nam je da se svaki gost osjeća prijatno
-                i poželjno.
-              </p>
-
-
-            </div>
+            ))}
 
 
           </div>
@@ -312,15 +259,18 @@ export default function AboutPage() {
 
 
 
+
           {/* FINAL */}
 
-          <div className="
-            mt-32
-            rounded-[40px]
-            overflow-hidden
-            relative
-            h-[450px]
-          ">
+          <div
+            className="
+              mt-32
+              rounded-[40px]
+              overflow-hidden
+              relative
+              h-[450px]
+            "
+          >
 
 
             <img
@@ -336,38 +286,46 @@ export default function AboutPage() {
             />
 
 
-            <div className="
-              absolute
-              inset-0
-              bg-black/70
-            "/>
+            <div
+              className="
+                absolute
+                inset-0
+                bg-black/70
+              "
+            />
 
 
-            <div className="
-              relative
-              h-full
-              flex
-              flex-col
-              justify-center
-              items-center
-              text-center
-              px-6
-            ">
+            <div
+              className="
+                relative
+                h-full
+                flex
+                flex-col
+                justify-center
+                items-center
+                text-center
+                px-6
+              "
+            >
 
 
-              <h2 className="
-                heading
-                text-5xl
-              ">
+              <h2
+                className="
+                  heading
+                  text-5xl
+                "
+              >
                 Vidimo se za stolom
               </h2>
 
 
-              <p className="
-                mt-5
-                text-zinc-300
-                text-lg
-              ">
+              <p
+                className="
+                  mt-5
+                  text-zinc-300
+                  text-lg
+                "
+              >
                 Dođite i uvjerite se zašto nam se gosti vraćaju.
               </p>
 

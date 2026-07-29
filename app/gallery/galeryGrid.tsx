@@ -10,7 +10,25 @@ interface GalleryGridProps {
 
 export default function GalleryGrid({ images }: GalleryGridProps) {
 
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
+
+  const nextImage = () => {
+    if (selectedIndex === null) return;
+
+    setSelectedIndex(
+      (selectedIndex + 1) % images.length
+    );
+  };
+
+
+  const prevImage = () => {
+    if (selectedIndex === null) return;
+
+    setSelectedIndex(
+      (selectedIndex - 1 + images.length) % images.length
+    );
+  };
 
 
   return (
@@ -29,22 +47,25 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
         {images.map((image, index) => (
 
           <button
-            key={index}
-            onClick={() => setSelectedImage(image)}
-            className={`
-              overflow-hidden
-              rounded-[32px]
-              border
-              border-white/10
-              cursor-pointer
-              group
-              ${
-                index === 1
-                ? "lg:row-span-2 h-[870px]"
-                : "h-[420px]"
-              }
-            `}
-          >
+  key={index}
+  onClick={() => setSelectedIndex(index)}
+  className={`
+    overflow-hidden
+    rounded-[32px]
+    border
+    border-white/10
+    cursor-pointer
+    group
+
+    aspect-square
+
+    ${
+      index === 1
+      ? "lg:row-span-2 lg:h-[870px] lg:aspect-auto"
+      : ""
+    }
+  `}
+>
 
             <img
               src={image}
@@ -67,10 +88,12 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
 
 
 
-      {selectedImage && (
+
+
+      {selectedIndex !== null && (
 
         <div
-          onClick={() => setSelectedImage(null)}
+          onClick={() => setSelectedIndex(null)}
           className="
             fixed
             inset-0
@@ -83,12 +106,16 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
           "
         >
 
+
+
+          {/* IMAGE */}
+
           <img
-            src={selectedImage}
+            src={images[selectedIndex]}
             alt="Preview"
             onClick={(e) => e.stopPropagation()}
             className="
-              max-h-[90vh]
+              max-h-[75vh]
               max-w-[90vw]
               rounded-3xl
               object-contain
@@ -96,13 +123,154 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
           />
 
 
-          <button
-            onClick={() => setSelectedImage(null)}
+
+
+
+
+
+
+          {/* MOBILE NAVIGATION */}
+
+          <div
             className="
-                cursor-pointer
+              flex
+              min-[830px]:hidden
+
               absolute
-              top-8
-              right-8
+              bottom-6
+
+              items-center
+              gap-28
+            "
+          >
+
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                prevImage();
+              }}
+              className="
+                cursor-pointer
+                text-white
+                text-6xl
+                hover:text-amber-400
+                transition
+              "
+            >
+              ‹
+            </button>
+
+
+
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                nextImage();
+              }}
+              className="
+                cursor-pointer
+                text-white
+                text-6xl
+                hover:text-amber-400
+                transition
+              "
+            >
+              ›
+            </button>
+
+
+          </div>
+
+
+
+
+
+
+
+
+          {/* DESKTOP LEFT */}
+
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              prevImage();
+            }}
+            className="
+              hidden
+              min-[830px]:block
+
+              cursor-pointer
+              absolute
+
+              left-4
+              xl:left-10
+
+              top-1/2
+              -translate-y-1/2
+
+              text-white
+              text-6xl
+              hover:text-amber-400
+              transition
+            "
+          >
+            ‹
+          </button>
+
+
+
+
+
+
+
+
+          {/* DESKTOP RIGHT */}
+
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              nextImage();
+            }}
+            className="
+              hidden
+              min-[830px]:block
+
+              cursor-pointer
+              absolute
+
+              right-4
+              xl:right-10
+
+              top-1/2
+              -translate-y-1/2
+
+              text-white
+              text-6xl
+              hover:text-amber-400
+              transition
+            "
+          >
+            ›
+          </button>
+
+
+
+
+
+
+
+
+          {/* CLOSE */}
+
+          <button
+            onClick={() => setSelectedIndex(null)}
+            className="
+              cursor-pointer
+              absolute
+
+              top-6
+              right-6
+
               text-white
               text-5xl
               hover:text-amber-400
