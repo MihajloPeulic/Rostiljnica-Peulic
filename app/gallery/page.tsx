@@ -4,7 +4,7 @@ import GalleryGrid from "./galeryGrid";
 
 const images = [
   "/images/batak.png",
-  "/images/vina_bg.png",
+  "/images/vina.png",
   "/images/hero_img1.jpg",
   "/images/gornji_sprat.png",
   "/images/cevapi.png",
@@ -16,7 +16,7 @@ const images = [
   "/images/vjesalice.png",
   "/images/koljenica.png",
   "/images/plata.png",
-  "/images/unutra2.png",
+  "/images/unutra2.jpeg",
   
 ];
 

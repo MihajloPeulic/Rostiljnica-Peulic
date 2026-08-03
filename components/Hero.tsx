@@ -2,6 +2,7 @@ import Image from "next/image";
 import ButtonLink from "./ButtonLink";
 
 
+
 export default function Hero() {
   return (
     <section
@@ -144,7 +145,6 @@ export default function Hero() {
       group
       cursor-pointer
       btn-primary
-      glow
       inline-flex
       items-center
       justify-center
@@ -157,28 +157,7 @@ export default function Hero() {
       hover:scale-105
       hover:-translate-y-1
     "
-    icon={
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth="1.8"
-        stroke="currentColor"
-        className="w-4 h-4 shrink-0"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M9 5h6M9 9h6M9 13h6M9 17h3"
-        />
-
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M6.75 3.75h10.5A1.75 1.75 0 0119 5.5v13a1.75 1.75 0 01-1.75 1.75H6.75A1.75 1.75 0 015 18.5v-13a1.75 1.75 0 011.75-1.75z"
-        />
-      </svg>
-    }
+    icon={""}
   />
 
 
@@ -202,22 +181,7 @@ export default function Hero() {
       hover:scale-105
       hover:-translate-y-1
     "
-    icon={
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth="2"
-        stroke="currentColor"
-        className="w-4 h-4 shrink-0"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"
-        />
-      </svg>
-    }
+    icon={""}
   />
 
 </div>

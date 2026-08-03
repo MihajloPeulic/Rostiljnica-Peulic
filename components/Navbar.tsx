@@ -3,8 +3,11 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
@@ -87,16 +90,18 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="
+                  className={`
                     nav-link-underline
                     whitespace-nowrap
                     text-sm
                     uppercase
                     tracking-[0.25em]
-                    text-zinc-300
-                    transition
-                    hover:text-amber-400
-                  "
+                    ${
+                      pathname === link.href
+                        ? "nav-link-active"
+                        : "text-zinc-300 hover:text-amber-400"
+                    }
+                  `}
                 >
                   {link.name}
                 </Link>
@@ -270,28 +275,31 @@ export default function Navbar() {
 
       {links.map((link, index) => (
 
-        <Link
-          key={link.href}
-          href={link.href}
-          onClick={() => setIsOpen(false)}
-          className="
-            block
-            text-lg
-            uppercase
-            tracking-[0.35em]
-            text-zinc-300
-            transition
-            hover:text-amber-400
-            hover:translate-x-2
-          "
-          style={{
-            transitionDelay: `${index * 70}ms`
-          }}
-        >
-          {link.name}
-        </Link>
+  <Link
+    key={link.href}
+    href={link.href}
+    onClick={() => setIsOpen(false)}
+    className={`
+      nav-link-underline
+      block
+      text-lg
+      uppercase
+      tracking-[0.35em]
+      transition
+      ${
+        pathname === link.href
+          ? "nav-link-active "
+          : "text-zinc-300 hover:text-amber-400 hover:translate-x-2"
+      }
+    `}
+    style={{
+      transitionDelay: `${index * 70}ms`
+    }}
+  >
+    {link.name}
+  </Link>
 
-      ))}
+))}
 
     </nav>
 

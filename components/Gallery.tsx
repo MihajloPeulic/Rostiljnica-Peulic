@@ -101,48 +101,33 @@ export default function Gallery() {
         <div className="mt-16 flex justify-center">
 
           <ButtonLink
-  href="/gallery"
-  text="Pogledaj cijelu galeriju"
-  className="
-    group
-    cursor-pointer
-    flex
-    items-center
-    justify-center
-    gap-3
-    rounded-full
-    border
-    border-amber-400/40
-    bg-amber-500
-    px-10
-    py-5
-    text-xs
-    uppercase
-    tracking-[0.25em]
-    font-semibold
-    text-black
-    transition
-    duration-300
-    hover:bg-amber-400
-    hover:scale-105
-    hover:-translate-y-1
-  "
-  icon={
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth="2"
-      stroke="currentColor"
-      className="w-5 h-5 shrink-0"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l3.409 3.409m0 0l1.409-1.409a2.25 2.25 0 013.182 0l2.159 2.159M6.75 21h10.5A2.25 2.25 0 0019.5 18.75v-10.5A2.25 2.25 0 0017.25 6h-10.5a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 006.75 21z"
-      />
-    </svg>
-  }
+            href="/gallery"
+            text="Pogledaj galeriju"
+            className="
+              group
+              cursor-pointer
+              flex
+              items-center
+              justify-center
+              gap-3
+              rounded-full
+              border
+              border-amber-400/40
+              bg-amber-500
+              px-10
+              py-5
+              text-xs
+              uppercase
+              tracking-[0.25em]
+              font-semibold
+              text-black
+              transition
+              duration-300
+              hover:bg-amber-400
+              hover:scale-105
+              hover:-translate-y-1
+            "
+            icon={""}
 />
 
         </div>

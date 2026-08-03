@@ -53,28 +53,7 @@ export default function FinalCTA() {
     hover:scale-105
     hover:-translate-y-1
   "
-  icon={
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth="2"
-      stroke="black"
-      className="w-5 h-5 shrink-0"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M8.25 6.75h7.5a3 3 0 013 3v7.5a3 3 0 01-3 3h-7.5a3 3 0 01-3-3v-7.5a3 3 0 013-3z"
-      />
-
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M8.25 10.5h7.5M8.25 14h4.5"
-      />
-    </svg>
-  }
+  icon={""}
 />
 
 

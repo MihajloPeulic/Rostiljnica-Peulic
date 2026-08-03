@@ -1,4 +1,6 @@
 import ButtonLink from "./ButtonLink";
+import { MapPin, Phone, Clock } from "lucide-react";
+
 
 export default function Contact() {
   return (
@@ -93,26 +95,10 @@ export default function Contact() {
                     justify-center
                   "
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="2"
-                    stroke="black"
-                    className="w-7 h-7 shrink-0"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M19.5 10.5c0 7.5-7.5 11-7.5 11s-7.5-3.5-7.5-11a7.5 7.5 0 1115 0z"
-                    />
-                  </svg>
+                  <MapPin
+                  className="w-7 h-7 shrink-0"
+                  strokeWidth={2}
+                />
                 </div>
 
 
@@ -150,20 +136,10 @@ export default function Contact() {
                     text-2xl
                   "
                 >
-                  <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth="2"
-        stroke="currentColor"
-        className="w-7 h-7 shrink-0"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"
-        />
-      </svg>
+                  <Clock
+                  className="w-7 h-7 shrink-0"
+                  strokeWidth={2}
+                />
                 </div>
 
 
@@ -202,22 +178,10 @@ export default function Contact() {
                   "
                 >
 
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="2"
-                    stroke="currentColor"
-                    className="w-7 h-7 shrink-0"
-                  >
-
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106a1.125 1.125 0 00-1.173.417l-.97 1.293a1.125 1.125 0 01-1.21.364 12.035 12.035 0 01-7.143-7.143 1.125 1.125 0 01.364-1.21l1.293-.97c.363-.272.53-.735.417-1.173L7.963 3.977A1.125 1.125 0 006.872 3.125H5.5A2.25 2.25 0 003.25 5.375v1.375z"
-                    />
-
-                  </svg>
+                  <Phone
+                  className="w-7 h-7 shrink-0"
+                  strokeWidth={2}
+                />
 
                 </div>
 
@@ -246,7 +210,7 @@ export default function Contact() {
 
                 <ButtonLink
                   href="https://maps.app.goo.gl/QbZffvpWEfow7RcE8"
-                  text="Otvori Google mape"
+                  text="Otvori mape"
                   className="
                     group
                     cursor-pointer
@@ -272,28 +236,7 @@ export default function Contact() {
                     hover:-translate-y-1
                   " 
                   external
-                  icon={
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth="2"
-                      stroke="black"
-                      className="w-5 h-5 shrink-0"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
-                      />
-
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M19.5 10.5c0 7.5-7.5 11-7.5 11s-7.5-3.5-7.5-11a7.5 7.5 0 1115 0z"
-                      />
-                    </svg>
-                  }
+                  icon={""}
                 />
 
               </div>
@@ -329,9 +272,11 @@ export default function Contact() {
                 h-full
                 border-0
               "
-              src="https://maps.app.goo.gl/fWBJ9bof9s7ZxCda"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2827.777708559488!2d17.658505876604874!3d44.86681997309765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475ddf88a591e9ff%3A0x26644446b63f4989!2zUm_FoXRpbGpuaWNhIFBldWxpxIc!5e0!3m2!1sen!2sba!4v1785747264846!5m2!1sen!2sba"
               loading="lazy"
             />
+
+            
 
           </div>
 

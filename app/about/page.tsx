@@ -1,3 +1,5 @@
+import { ShieldCheck, ChefHat, UsersRound } from "lucide-react";
+
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-[#09090b] text-white">
@@ -177,17 +179,26 @@ export default function AboutPage() {
 
             {[
               {
-                icon: "🥩",
+                icon: <ShieldCheck
+                      className="w-8 h-8"
+                      strokeWidth={2}
+                />,
                 title: "Kvalitet",
                 text: "Biramo kvalitetne sastojke i pripremamo svako jelo sa posebnom pažnjom."
               },
               {
-                icon: "🔥",
+                icon: <ChefHat
+                  className="w-8 h-8"
+                  strokeWidth={2}
+                />,
                 title: "Tradicija",
                 text: "Spoj domaćih ukusa i tradicionalne pripreme koju naši gosti prepoznaju."
               },
               {
-                icon: "🤝",
+                icon: <UsersRound
+                      className="w-8 h-8"
+                      strokeWidth={2}
+                />,
                 title: "Gostoprimstvo",
                 text: "Važno nam je da se svaki gost osjeća prijatno i poželjno."
               }
