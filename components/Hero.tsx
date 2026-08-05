@@ -3,7 +3,14 @@ import ButtonLink from "./ButtonLink";
 
 
 
-export default function Hero() {
+export default function Hero(
+  {
+    hero
+  }: Record<string, any>
+) {
+
+
+
   return (
     <section
       className="
@@ -90,14 +97,15 @@ export default function Hero() {
           leading-[1.05]
           "
         >
-          Tradicija
+          {hero("title1")}
 
           <span className="text-amber-400">
-            {" "}ukusa
+            {" "}{hero("title2")}
           </span>
+          <br></br>
 
-          {" "}na tanjiru
-
+          {" "}{hero("title3")}
+          
         </h1>
 
 
@@ -117,8 +125,7 @@ export default function Hero() {
           leading-7
           "
         >
-          Vrhunsko meso sa roštilja, svježi sastojci i prepoznatljiv ukus
-          posluženi u toploj atmosferi za porodicu i prijatelje.
+          {hero("desc")}
         </p>
 
 
@@ -126,65 +133,65 @@ export default function Hero() {
 
 
         <div
-  className="
-    fade-up
-    delay3
-    mt-10
-    flex
-    flex-col
-    sm:flex-row
-    gap-5
-    justify-center
-  "
->
+          className="
+            fade-up
+            delay3
+            mt-10
+            flex
+            flex-col
+            sm:flex-row
+            gap-5
+            justify-center
+          "
+        >
 
-  <ButtonLink
-    href="/menu"
-    text="Pogledaj meni"
-    className="
-      group
-      cursor-pointer
-      btn-primary
-      inline-flex
-      items-center
-      justify-center
-      gap-3
-      text-xs
-      uppercase
-      tracking-[0.25em]
-      transition
-      duration-300
-      hover:scale-105
-      hover:-translate-y-1
-    "
-    icon={""}
-  />
+          <ButtonLink
+            href="/menu"
+            text={hero("buttonY")}
+            className="
+              group
+              cursor-pointer
+              btn-primary
+              inline-flex
+              items-center
+              justify-center
+              gap-3
+              text-xs
+              uppercase
+              tracking-[0.25em]
+              transition
+              duration-300
+              hover:scale-105
+              hover:-translate-y-1
+            "
+            icon={""}
+          />
 
 
 
-  <ButtonLink
-    href="/contact"
-    text="Rezerviši sto"
-    className="
-      group
-      cursor-pointer
-      btn-secondary
-      inline-flex
-      items-center
-      justify-center
-      gap-3
-      text-xs
-      uppercase
-      tracking-[0.25em]
-      transition
-      duration-300
-      hover:scale-105
-      hover:-translate-y-1
-    "
-    icon={""}
-  />
+            <ButtonLink
+              href="/contact"
+              text={hero("buttonW")}
+              className="
+                group
+                cursor-pointer
+                btn-secondary
+                inline-flex
+                items-center
+                justify-center
+                gap-3
+                text-xs
+                uppercase
+                tracking-[0.25em]
+                transition
+                duration-300
+                hover:scale-105
+                hover:-translate-y-1
+              "
+              icon={""}
+            />
 
-</div>
+          </div>
 
 
 
@@ -217,7 +224,7 @@ export default function Hero() {
             </div>
 
             <div className="mt-3 text-zinc-400">
-              Godina iskustva
+              {hero("exp")}
             </div>
 
           </div>
@@ -238,7 +245,7 @@ export default function Hero() {
             </div>
 
             <div className="mt-3 text-zinc-400">
-              Zadovoljnih gostiju
+              {hero("guests")}
             </div>
 
           </div>
@@ -259,7 +266,7 @@ export default function Hero() {
             </div>
 
             <div className="mt-3 text-zinc-400">
-              Google ocjena
+             {hero("google")}
             </div>
 
           </div>

@@ -1,23 +1,31 @@
 const reviews = [
   {
-    name: "Marko",
-    initial: "M",
-    text: "Best grill in town. The meat is always fresh and perfectly prepared.",
+    name: "Lilly Žunić",
+    initial: "L",
+    text: "Najbolji ćevapi u Prnjavoru! Usluga je veoma brza i ljubazna, a enterijer je predivan.",
   },
   {
-    name: "Ana",
-    initial: "A",
-    text: "Amazing atmosphere and incredible food. Definitely coming again.",
-  },
-  {
-    name: "David",
+    name: "David Blanc",
     initial: "D",
-    text: "Traditional taste with modern service. Highly recommended.",
+    text: "Одлична храна i љубазно особље. Лако је доћи до објекта и погодан је паркинг испред. Топло препоручујем!",
+  },
+  {
+    name: "Mišo Mitrić",
+    initial: "M",
+    text: "Odlična hrana, sjajan ambijent, nije previše skupo, odlična usluga. Samo pohvale!",
   },
 ];
 
 
-export default function Reviews() {
+export default function Reviews(
+  {
+    guests
+  }: Record<string, any>
+) {
+
+  const reviews = guests.raw("reviews") as {name: string; text: string; initial: number;}[]
+
+  
   return (
     <section className="py-32 relative reveal">
 
@@ -32,7 +40,7 @@ export default function Reviews() {
             tracking-[0.5em] 
             text-amber-400
           ">
-            Recenzije
+            {guests("title1")}
           </p>
 
 
@@ -41,7 +49,7 @@ export default function Reviews() {
             text-5xl 
             mt-5
           ">
-            Šta kažu gosti
+            {guests("title2")}
           </h2>
 
 
@@ -62,7 +70,7 @@ export default function Reviews() {
             text-zinc-400 
             mt-3
           ">
-            200+ Google recenzija
+            200+ {guests("google_rew")}
           </p>
 
 
@@ -162,7 +170,7 @@ export default function Reviews() {
 
             </div>
 
-          ))}
+          ))} 
 
 
         </div>

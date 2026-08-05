@@ -2,7 +2,11 @@ import ButtonLink from "./ButtonLink";
 import { MapPin, Phone, Clock } from "lucide-react";
 
 
-export default function Contact() {
+export default function Contact(
+  {
+    maps
+  }: Record<string, any>
+) {
   return (
     <section className="py-20 md:py-32 reveal overflow-hidden">
 
@@ -33,7 +37,7 @@ export default function Contact() {
                 text-amber-400
               "
             >
-              Posjetite nas
+              {maps("title1")}
             </p>
 
 
@@ -47,7 +51,7 @@ export default function Contact() {
                 mt-6
               "
             >
-              Dođite i uvjerite se u kvalitet
+              {maps("title2")}
             </h2>
 
 
@@ -60,8 +64,8 @@ export default function Contact() {
                 leading-8
               "
             >
-              Svratite na ručak, večeru ili posebno druženje.
-              Očekujemo vas uz dobru hranu i prijatnu atmosferu.
+              {maps("desc")}
+
             </p>
 
 
@@ -105,7 +109,7 @@ export default function Contact() {
                 <div className="text-left flex-1">
 
                   <h3 className="font-semibold text-xl">
-                    Lokacija
+                    {maps("location")}
                   </h3>
 
                   <p className="text-zinc-400">
@@ -146,11 +150,11 @@ export default function Contact() {
                 <div className="text-left flex-1">
 
                   <h3 className="font-semibold text-xl">
-                    Radno vrijeme
+                    {maps("working_hours")}
                   </h3>
 
                   <p className="text-zinc-400">
-                    Svaki dan od 07:00 - 20:00
+                    {maps("every_day")} 07:00 - 20:00
                   </p>
 
                 </div>
@@ -190,7 +194,7 @@ export default function Contact() {
                 <div className="text-left flex-1">
 
                   <h3 className="font-semibold text-xl">
-                    Telefon
+                    {maps("phone")}
                   </h3>
 
                   <p className="text-zinc-400">
@@ -210,7 +214,7 @@ export default function Contact() {
 
                 <ButtonLink
                   href="https://maps.app.goo.gl/QbZffvpWEfow7RcE8"
-                  text="Otvori mape"
+                  text={maps("buttonY")}
                   className="
                     group
                     cursor-pointer

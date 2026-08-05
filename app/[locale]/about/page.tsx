@@ -1,18 +1,53 @@
 import { ShieldCheck, ChefHat, UsersRound } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 
-export default function AboutPage() {
+import type { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+
+  return {
+    title: locale === "en" ? "About Us" : "O nama",
+    
+    description:
+      locale === "en"
+        ? "Discover the story behind Peulić Grill in Prnjavor. Learn about our commitment to fresh locally sourced meat, traditional recipes, and welcoming atmosphere."
+        : "Upoznajte priču iza Roštiljnice Peulić u Prnjavoru. Saznajte više o našoj tradiciji, isključivo svježem domaćem mesu i prijateljskom ambijentu.",
+    
+    keywords:
+      locale === "en"
+        ? ["about Peulic Grill", "restaurant history Prnjavor", "traditional barbecue tradition", "best grill Prnjavor story"]
+        : ["o nama roštiljnica peulić", "tradicija roštilja Prnjavor", "domaće meso Prnjavor", "restoran sa tradicijom"],
+    
+    openGraph: {
+      title:
+        locale === "en"
+          ? "About Us | Peulić Grill"
+          : "O nama | Roštiljnica Peulić",
+      description:
+        locale === "en"
+          ? "The tradition of authentic barbecue. Learn why our guests keep coming back."
+          : "Tradicija pravog roštilja. Saznajte zašto nam se gosti rado iznova vraćaju.",
+      // url: "/images/gornji_sprat.png", 
+    },
+  };
+}
+
+
+export default async function AboutPage() {
+  const t = await getTranslations("about");
+
   return (
     <main className="min-h-screen bg-[#09090b] text-white">
-
       <section className="pt-32 pb-32">
-
         <div className="container-page">
 
-
           {/* HERO */}
-
           <div className="text-center max-w-4xl mx-auto">
-
             <p
               className="
                 fade-up
@@ -21,9 +56,8 @@ export default function AboutPage() {
                 text-amber-400
               "
             >
-              O nama
+              {t("title1")}
             </p>
-
 
             <h1
               className="
@@ -35,9 +69,8 @@ export default function AboutPage() {
                 mt-6
               "
             >
-              Tradicija ukusa i kvaliteta
+              {t("title2")}
             </h1>
-
 
             <p
               className="
@@ -49,19 +82,11 @@ export default function AboutPage() {
                 leading-8
               "
             >
-              Roštiljnica Peulić je mjesto gdje se tradicionalna kuhinja,
-              kvalitetni sastojci i domaća atmosfera spajaju u jedno.
-              Naš cilj je da svaki gost ode zadovoljan i da se uvijek vraća.
+              {t("desc")}
             </p>
-
           </div>
 
-
-
-
-
           {/* STORY */}
-
           <div
             className="
               mt-24
@@ -71,8 +96,6 @@ export default function AboutPage() {
               items-center
             "
           >
-
-
             <div
               className="
                 rounded-[40px]
@@ -82,26 +105,18 @@ export default function AboutPage() {
                 h-[500px]
               "
             >
-
               <img
                 src="/images/gornji_sprat.png"
-                alt="Roštiljnica Peulić"
+                alt="Ambijent Roštiljnice Peulić Prnjavor"
                 className="
                   w-full
                   h-full
                   object-cover
                 "
               />
-
             </div>
 
-
-
-
-
             <div className="text-center lg:text-left">
-
-
               <p
                 className="
                   uppercase
@@ -109,10 +124,8 @@ export default function AboutPage() {
                   text-amber-400
                 "
               >
-                Naša priča
+                {t("st")}
               </p>
-
-
 
               <h2
                 className="
@@ -121,10 +134,8 @@ export default function AboutPage() {
                   mt-5
                 "
               >
-                Više od običnog restorana
+                {t("st2")}
               </h2>
-
-
 
               <p
                 className="
@@ -133,12 +144,8 @@ export default function AboutPage() {
                   leading-8
                 "
               >
-                Godinama pripremamo jela po provjerenim receptima,
-                sa posebnim fokusom na kvalitet mesa, svježe namirnice
-                i pažljivu pripremu svakog obroka.
+               {t("sc1")}
               </p>
-
-
 
               <p
                 className="
@@ -147,26 +154,12 @@ export default function AboutPage() {
                   leading-8
                 "
               >
-                Bilo da dolazite na brz ručak, porodično okupljanje
-                ili druženje sa prijateljima, želimo da svaki trenutak
-                kod nas bude poseban.
+                {t("sc2")}
               </p>
-
-
             </div>
-
-
           </div>
 
-
-
-
-
-
-
-
           {/* VALUES */}
-
           <div
             className="
               mt-32
@@ -175,35 +168,23 @@ export default function AboutPage() {
               gap-8
             "
           >
-
-
             {[
               {
-                icon: <ShieldCheck
-                      className="w-8 h-8"
-                      strokeWidth={2}
-                />,
-                title: "Kvalitet",
-                text: "Biramo kvalitetne sastojke i pripremamo svako jelo sa posebnom pažnjom."
+                icon: <ShieldCheck className="w-8 h-8" strokeWidth={2} />,
+                title: t("c1t"),
+                text: t("c1c")
               },
               {
-                icon: <ChefHat
-                  className="w-8 h-8"
-                  strokeWidth={2}
-                />,
-                title: "Tradicija",
-                text: "Spoj domaćih ukusa i tradicionalne pripreme koju naši gosti prepoznaju."
+                icon: <ChefHat className="w-8 h-8" strokeWidth={2} />,
+                title: t("c2t"),
+                text: t("c2c")
               },
               {
-                icon: <UsersRound
-                      className="w-8 h-8"
-                      strokeWidth={2}
-                />,
-                title: "Gostoprimstvo",
-                text: "Važno nam je da se svaki gost osjeća prijatno i poželjno."
+                icon: <UsersRound className="w-8 h-8" strokeWidth={2} />,
+                title: t("c3t"),
+                text: t("c3c")
               }
             ].map((item) => (
-
               <div
                 key={item.title}
                 className="
@@ -214,9 +195,11 @@ export default function AboutPage() {
                   p-8
                   text-center
                   md:text-left
+                  hover:-translate-y-3
+                    transition
+                    duration-500
                 "
               >
-
                 <div
                   className="
                     w-14
@@ -235,7 +218,6 @@ export default function AboutPage() {
                   {item.icon}
                 </div>
 
-
                 <h3
                   className="
                     mt-6
@@ -246,7 +228,6 @@ export default function AboutPage() {
                   {item.title}
                 </h3>
 
-
                 <p
                   className="
                     mt-4
@@ -256,23 +237,11 @@ export default function AboutPage() {
                 >
                   {item.text}
                 </p>
-
-
               </div>
-
             ))}
-
-
           </div>
 
-
-
-
-
-
-
-          {/* FINAL */}
-
+          {/* FINAL CTA */}
           <div
             className="
               mt-32
@@ -282,11 +251,9 @@ export default function AboutPage() {
               h-[450px]
             "
           >
-
-
             <img
               src="/images/hero_img1.jpg"
-              alt="Roštiljnica"
+              alt="Ukusna hrana i roštilj"
               className="
                 absolute
                 inset-0
@@ -296,7 +263,6 @@ export default function AboutPage() {
               "
             />
 
-
             <div
               className="
                 absolute
@@ -304,7 +270,6 @@ export default function AboutPage() {
                 bg-black/70
               "
             />
-
 
             <div
               className="
@@ -318,41 +283,30 @@ export default function AboutPage() {
                 px-6
               "
             >
-
-
               <h2
                 className="
                   heading
                   text-5xl
                 "
               >
-                Vidimo se za stolom
+                {t("lt")}
               </h2>
-
 
               <p
                 className="
                   mt-5
                   text-zinc-300
                   text-lg
+                  max-w-2xl
                 "
               >
-                Dođite i uvjerite se zašto nam se gosti vraćaju.
+                {t("ld")}
               </p>
-
-
             </div>
-
-
           </div>
 
-
-
         </div>
-
       </section>
-
-
     </main>
   );
 }

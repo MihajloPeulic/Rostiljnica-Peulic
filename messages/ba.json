@@ -1,0 +1,463 @@
+{
+  "menu": {
+    "title": "Jelovnik",
+    "description": "Tradicionalna jela, specijaliteti sa roštilja i domaća kuhinja pripremljeni od pažljivo odabranih namirnica.",
+    "categories": [
+      {
+        "title": "Doručak",
+        "items": [
+          {
+            "name": "Omlet",
+            "description": "Sir edamer, šunka"
+          },
+          {
+            "name": "Jaja sa kobasicom",
+            "description": "2 jajeta, 3 kobasice, pomfrit"
+          },
+          {
+            "name": "Jaja sa carskim mesom",
+            "description": "2 jajeta, carsko meso 100 g, kajmak"
+          },
+          {
+            "name": "Palenta sa sirom"
+          },
+          {
+            "name": "Palenta sa pancetom"
+          }
+        ]
+      },
+      {
+        "title": "Gotova jela",
+        "items": [
+          {
+            "name": "Ponedjeljak - Pasulj (kobasica ili slanina)",
+            "description": ""
+          },
+          {
+            "name": "Utorak - Gulaš (svinjski)",
+            "description": ""
+          },
+          {
+            "name": "Srijeda - Ćufte",
+            "description": ""
+          },
+          {
+            "name": "Četvrtak - Paprikaš ili Pasulj",
+            "description": ""
+          },
+          {
+            "name": "Petak - Batak sa rižom ili Bolonjez tjestenina",
+            "description": ""
+          },
+          {
+            "name": "Subota - Sarma ili Punjene paprike",
+            "description": ""
+          },
+          {
+            "name": "Teleća čorba",
+            "description": ""
+          },
+          {
+            "name": "Mađarska čorba",
+            "description": ""
+          },
+          {
+            "name": "Riblja čorba",
+            "description": ""
+          },
+          {
+            "name": "Koljenica",
+            "description": "1 kg"
+          },
+          {
+            "name": "Teletina lešo",
+            "description": "300 gr."
+          }
+        ]
+      },
+      {
+        "title": "Jela sa roštilja",
+        "items": [
+          {
+            "name": "Ćevapi veliki",
+            "description": "180 g"
+          },
+          {
+            "name": "Ćevapi srednji"
+          },
+          {
+            "name": "Ćevapi mali"
+          },
+          {
+            "name": "Ćevapi Leskovački",
+            "description": "200 g"
+          },
+          {
+            "name": "Šiš ćevap veliki",
+            "description": "200 g"
+          },
+          {
+            "name": "Šiš ćevap mali",
+            "description": "100 g"
+          },
+          {
+            "name": "Pljeskavica",
+            "description": "180 g"
+          },
+          {
+            "name": "Pljeskavica punjena kajmakom",
+            "description": "180 g"
+          },
+          {
+            "name": "Gurmanska pljeskavica",
+            "description": "meso, edamer sir, slanina - 180 g"
+          },
+          {
+            "name": "Kobasica roštiljska",
+            "description": "250 g"
+          },
+          {
+            "name": "Kobasica roštiljska mala",
+            "description": "150 g"
+          },
+          {
+            "name": "Kobasica roštiljska dimljena",
+            "description": "250 g"
+          },
+          {
+            "name": "Kobasica roštiljska dimljena mala",
+            "description": "150 g"
+          },
+          {
+            "name": "Krmenadla",
+            "description": "250 g"
+          },
+          {
+            "name": "Vrat svinjski",
+            "description": "250 g"
+          },
+          {
+            "name": "Ražnjići svinjski",
+            "description": "200 g"
+          },
+          {
+            "name": "Dimljena vješalica",
+            "description": "250 g"
+          },
+          {
+            "name": "Bijela vješalica",
+            "description": "250 g"
+          },
+          {
+            "name": "Punjena vješalica",
+            "description": "250 g"
+          },
+          {
+            "name": "Pileći ražnjići u slanini",
+            "description": "200 g"
+          },
+          {
+            "name": "Pileća prsa",
+            "description": "200 g"
+          },
+          {
+            "name": "Batak - Karabatak",
+            "description": "200 g"
+          },
+          {
+            "name": "Teleći kotlet",
+            "description": "200 g"
+          },
+          {
+            "name": "Bubrežnjak",
+            "description": "300 g"
+          },
+          {
+            "name": "Brizla",
+            "description": "200 g"
+          },
+          {
+            "name": "Teleća džigerica",
+            "description": "200 g"
+          },
+          {
+            "name": "Teleće krpice",
+            "description": "200 g"
+          },
+          {
+            "name": "Ramstek",
+            "description": "300 g"
+          },
+          {
+            "name": "Biftek",
+            "description": "300 g"
+          },
+          {
+            "name": "Miješano meso",
+            "description": "450 g"
+          },
+          {
+            "name": "Plata \"PEULIĆ\" za 2 osobe",
+            "description": "900 g"
+          },
+          {
+            "name": "Plata \"PEULIĆ\" za 3 osobe",
+            "description": "1570 g"
+          }
+        ]
+      },
+      {
+        "title": "Jela po narudžbi",
+        "items": [
+          {
+            "name": "Chicken nuggets",
+            "description": "200 g"
+          },
+          {
+            "name": "Chicken nuggets mali",
+            "description": "100 g"
+          },
+          {
+            "name": "Banjalučka šnicla",
+            "description": "200 g"
+          },
+          {
+            "name": "Kordon šnicla",
+            "description": "200 g"
+          },
+          {
+            "name": "Karađorđeva šnicla svinjska",
+            "description": "200 g"
+          },
+          {
+            "name": "Karađorđeva pileća",
+            "description": "200 g"
+          },
+          {
+            "name": "Karađorđeva teleća",
+            "description": "200 g"
+          },
+          {
+            "name": "Bečka šnicla pileća",
+            "description": "200 g"
+          },
+          {
+            "name": "Bečka šnicla svinjska",
+            "description": "200 g"
+          },
+          {
+            "name": "Bečka šnicla teleća",
+            "description": "200 g"
+          },
+          {
+            "name": "Natur šnicla svinjska",
+            "description": "200 g"
+          },
+          {
+            "name": "Natur šnicla teleća",
+            "description": "200 g"
+          }
+        ]
+      },
+      {
+        "title": "Riba",
+        "items": [
+          {
+            "name": "Šaran",
+            "description": "300 g"
+          },
+          {
+            "name": "Pastrmka",
+            "description": "300 g"
+          },
+          {
+            "name": "Oslić",
+            "description": "300 g"
+          },
+          {
+            "name": "Som filet",
+            "description": "300 g"
+          }
+        ]
+      },
+      {
+        "title": "Salate",
+        "items": [
+          {
+            "name": "Svježi paradajz",
+            "description": "200 g"
+          },
+          {
+            "name": "Svježi krastavac",
+            "description": "200 g"
+          },
+          {
+            "name": "Svježi kupus",
+            "description": "200 g"
+          },
+          {
+            "name": "Zelena salata",
+            "description": "200 g"
+          },
+          {
+            "name": "Kiseli kupus",
+            "description": "200 g"
+          },
+          {
+            "name": "Srpska salata",
+            "description": "200 g"
+          },
+          {
+            "name": "Šopska salata",
+            "description": "200 g"
+          },
+          {
+            "name": "Grčka salata",
+            "description": "200 g"
+          }
+        ]
+      }
+    ]
+  },
+
+  "gallery": {
+    "eyebrow": "Galerija",
+    "title":"Ukusi i atmosfera",
+    "description": "Pogledajte djelić naše kuhinje, specijaliteta i ambijenta u kojem nastaju nezaboravni trenuci."
+  },
+
+  "contact": {
+    "eyebrow": "Kontakt",
+    "title":"Kontaktirajte nas",
+    "description": "Rezervišite sto ili nam pošaljite poruku. Biće nam zadovoljstvo da vas ugostimo.",
+    "phone": "Telefon",
+    "location": "Lokacija",
+    "working_hours": "Radno vrijeme",
+    "send_a_message": "Pošaljite poruku",
+    "button": "Pošalji poruku",
+    "name": "Ime",
+    "your_message": "Vaša poruka"
+  },
+
+  "navbar": {
+    "home": "Početna",
+    "menu":"Meni",
+    "gallery": "Galerija",
+    "about": "O nama",
+    "contact": "Kontakt",
+    "button": "Rezerviši",
+    "button_phone": "Rezerviši sto",
+    "navigation": "Navigacija",
+    "fu": "Pronađite nas",
+    "desc": "Mjesto za dobru hranu i prijatno druženje.",
+    "rights": "Sva prava zadržana."
+  },
+
+   "hero": {
+    "title1":"Godine",
+    "title2":"tradicije.",
+    "title3":"Prepoznatljiv ukus.",
+    "desc": "Uživajte u domaćem roštilju u Prnjavoru, u opuštenoj atmosferi i jelima pripremljenim po tradicionalnoj recepturi.",
+    "buttonY": "Pogledaj meni",
+    "buttonW": "Rezerviši sto",
+    "exp": "Godina iskustva",
+    "guests": "Zadovoljnih gostiju",
+    "google": "Google ocjena"
+  },
+
+
+  "favorite_dishes": {
+    "title1":"Naši specijaliteti",
+    "title2":"Favoriti kuće",
+    "dishes": [
+    {
+      "name": "Ćevapi",
+      "description": "Domaći ćevapi sa roštilja, savršenog ukusa zahvaljujući pažljivo biranim sastojcima.",
+      "image": "/images/cevapi.png"
+    },
+    {
+      "name": "Koljenica",
+      "description": "Sočna svinjska koljenica, sporo kuvana do savršenstva i servirana uz domaće priloge.",
+      "image": "/images/koljenica.png"
+    },
+    {
+      "name": "Plata za troje",
+      "description": "Kombinacija pažljivo odabranih roštiljskih specijaliteta i domaćih priloga, idealna za zajedničko uživanje.",
+      "image": "/images/plata.png"
+    }
+  ]
+  },
+
+  "specialties": {
+    "title1":"Specijaliteti kuće",
+    "title2":"Ukus koji predstavlja našu kuhinju",
+    "desc": "Kvalitetni sastojci, pažljiva priprema i prepoznatljivi ukusi koji našu kuhinju čine posebnom. Jela pripremljena za one koji uživaju u dobroj hrani.",
+    "buttonY": "Pogledaj meni"
+  },
+
+  "gallery_comp": {
+    "title1":"Galerija",
+    "title2":"Ukusi i atmosfera",
+    "buttonY": "Pogledaj galeriju"
+  },
+
+  "guests": {
+    "title1":"Recenzije",
+    "title2":"Šta kažu gosti",
+    "google_rew": "Google recenzija",
+    "reviews": [
+    {
+      "name": "Lilly Žunić",
+      "initial": "L",
+      "text": "Najbolji ćevapi u Prnjavoru! Usluga je veoma brza i ljubazna, a enterijer je predivan."
+    },
+    {
+      "name": "David Blanc",
+      "initial": "D",
+      "text": "Одлична храна i љубазно особље. Лако је доћи до објекта и погодан је паркинг испред. Топло препоручујем!"
+    },
+    {
+      "name": "Mišo Mitrić",
+      "initial": "M",
+      "text": "Odlična hrana, sjajan ambijent, nije previše skupo, odlična usluga. Samo pohvale!"
+    }
+  ]
+  },
+
+  "maps": {
+    "title1":"Posjetite nas",
+    "title2":"Dođite i uvjerite se u kvalitet",
+    "desc": "Svratite na ručak, večeru ili posebno druženje. Očekujemo vas uz dobru hranu i prijatnu atmosferu.",
+    "buttonY": "Otvori mape",
+    "location": "Lokacija",
+    "working_hours": "Radno vrijeme",
+    "phone": "Telefon",
+    "every_day": "Svaki dan od"
+  },
+
+  "final_cta": {
+    "title1":"Rezerviši danas",
+    "title2":"Vidimo se za stolom",
+    "buttonY": "Rezerviši sto"
+  },
+
+  "about": {
+    "title1":"Upoznajte Peulić",
+    "title2":"Tradicija pravog roštilja",
+    "desc": "Mjesto u Prnjavoru poznato po vrhunskom roštilju, svježem mesu i pravoj domaćinskoj atmosferi. Kvalitetna hrana i zadovoljni gosti su naša najbolja preporuka.",
+    "st": "Naša priča",
+    "st2": "Naš recept za dobar roštilj",
+    "sc1": "Naša tajna je u jednostavnosti: uvijek svježe, isključivo domaće meso i tradicionalna priprema bez prečica. To je standard od kojeg nikada ne odstupamo.",
+    "sc2": "Bilo da dolazite na brzi ručak, porodično okupljanje ili opušteno druženje sa prijateljima, dočekaće vas ugodan ambijent i brza, ljubazna usluga.",
+    "c1t": "Domaće meso",
+    "c2t": "Tradicija ukusa",
+    "c3t": "Prijatan ambijent",
+    "c1c": "Koristimo isključivo svježe i provjereno meso od pouzdanih lokalnih dobavljača.",
+    "c2c": "Čuvamo autentičan način pripreme koji našem roštilju daje prepoznatljiv ukus.",
+    "c3c": "Opuštena atmosfera i uslužno osoblje zbog kojeg se gosti rado iznova vraćaju.",
+    "lt": "Vaš sto je spreman",
+    "ld": "Posjetite nas i uživajte u najboljem roštilju u gradu. Očekujemo vas."
+    
+  }
+
+}

@@ -1,10 +1,54 @@
 
 import ContactForm from "@/components/ContactForm";
-
 import { MapPin, Phone, Clock } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 
 
-export default function ContactPage() {
+import type { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+
+  return {
+    title: locale === "en" ? "Contact" : "Kontakt",
+    
+    description:
+      locale === "en"
+        ? "Get in touch with Peulić Grill in Prnjavor. Book a table, send us a message, check our working hours, or find our exact location."
+        : "Kontaktirajte Roštiljnicu Peulić u Prnjavoru. Rezervišite sto, pošaljite nam poruku, provjerite radno vrijeme ili pogledajte lokaciju.",
+    
+    keywords:
+      locale === "en"
+        ? ["contact Peulic Grill", "book a table Prnjavor", "restaurant location Prnjavor", "working hours", "phone number"]
+        : ["kontakt roštiljnica peulić", "rezervacija sto Prnjavor", "lokacija restoran Prnjavor", "radno vrijeme", "telefon"],
+    
+    openGraph: {
+      title:
+        locale === "en"
+          ? "Contact & Reservations | Peulić Grill"
+          : "Kontakt i rezervacije | Roštiljnica Peulić",
+      description:
+        locale === "en"
+          ? "Book your table today or find us easily in Prnjavor. We look forward to your visit."
+          : "Rezervišite svoj sto ili nas lako pronađite u Prnjavoru. Očekujemo vas uz odličnu hranu.",
+    },
+  };
+}
+ 
+export default async function ContactPage() {
+
+
+  const t = await getTranslations("contact");
+  const bt = String(t("button"))
+  const ym = String(t("your_message"))
+  const namee = String(t("name"))
+
+  
+
   return (
     <main className="min-h-screen bg-[#09090b] text-white">
  
@@ -19,16 +63,15 @@ export default function ContactPage() {
           <div className="text-center mb-16">
 
             <p className="fade-up uppercase tracking-[0.5em] text-amber-400">
-              Kontakt
+              {t("eyebrow")}
             </p>
 
             <h1 className="fade-up delay1 heading text-5xl md:text-7xl mt-6">
-              Kontaktirajte nas
+              {t("title")}
             </h1>
 
             <p className="fade-up delay2 mt-6 text-zinc-400 max-w-2xl mx-auto text-lg">
-              Rezervišite sto ili nam pošaljite poruku.
-              Biće nam zadovoljstvo da vas ugostimo.
+              {t("description")}
             </p>
 
           </div>
@@ -70,7 +113,7 @@ export default function ContactPage() {
               </div>
 
               <h3 className="mt-5 font-semibold text-xl">
-                Telefon
+                {t("phone")}
               </h3>
 
               <a
@@ -116,7 +159,7 @@ export default function ContactPage() {
 
 
               <h3 className="mt-5 font-semibold text-xl">
-                Lokacija
+                {t("location")}
               </h3>
 
 
@@ -163,7 +206,7 @@ export default function ContactPage() {
 
 
               <h3 className="mt-5 font-semibold text-xl">
-                Radno vrijeme
+                {t("working_hours")}
               </h3>
 
 
@@ -201,12 +244,12 @@ export default function ContactPage() {
 
 
               <h2 className="heading text-4xl text-center">
-                Pošaljite poruku
+                {t("send_a_message")}
               </h2>
 
 
 
-              <ContactForm></ContactForm>
+              <ContactForm button={bt} name={namee} your_message={ym}></ContactForm>
 
 
             </div>

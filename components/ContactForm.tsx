@@ -4,7 +4,17 @@ import { useState } from "react";
 import { sendEmail } from "@/actions/sendEmail";
 
 
-export default function ContactForm() {
+export default function ContactForm(
+  {
+    button,
+    name, 
+    your_message
+  }: {
+    button:string,
+    name: string, 
+    your_message: string
+  
+  }) {
 
   const [status, setStatus] = useState<{
     success: boolean;
@@ -25,12 +35,12 @@ export default function ContactForm() {
 
       <div className="grid md:grid-cols-2 gap-6">
 
-
         <input
-          placeholder="Ime"
+          placeholder={name}
           name="name"
           required
           className="
+            w-full
             rounded-2xl
             bg-black/40
             border
@@ -41,7 +51,6 @@ export default function ContactForm() {
             focus:border-amber-400
           "
         />
-
 
         <input
           placeholder="Email"
@@ -49,6 +58,7 @@ export default function ContactForm() {
           type="email"
           required
           className="
+            w-full
             rounded-2xl
             bg-black/40
             border
@@ -60,15 +70,13 @@ export default function ContactForm() {
           "
         />
 
-
       </div>
-
 
 
 
       <textarea
         rows={5}
-        placeholder="Vaša poruka..."
+        placeholder={your_message + "..."}
         name="message"
         required
         className="
@@ -100,7 +108,7 @@ export default function ContactForm() {
           transition
         "
       >
-        Pošalji poruku
+        {button}
       </button>
 
 

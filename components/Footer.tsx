@@ -1,7 +1,26 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+
 import Image from "next/image";
 
-export default function Footer() {
+import { NavbarProps, NavLink } from "./Navbar";
+
+export default function Footer(
+  { 
+    links,
+    kk,
+    nn,
+    fu,
+    desc,
+    rights
+  }: NavbarProps & {
+    kk: string;
+    nn: string;
+    fu: string;
+    desc: string,
+    rights: string
+  }
+) {
+
   return (
     <footer className="border-t border-white/10 pt-10 pb-6">
 
@@ -12,31 +31,31 @@ export default function Footer() {
 
           {/* BRAND */}
 
-<div>
+            <div>
 
-  <Image
-    src="/images/logo_nav.png"
-    alt="Roštiljnica Peulić logo"
-    width={70}
-    height={70}
-    className="
-      object-contain
-      -rotate-10
-      mb-4
-    "
-  />
-
-
-  <h2 className="heading text-4xl">
-    Roštiljnica Peulić
-  </h2>
+              <Image
+                src="/images/logo_nav.png"
+                alt="Roštiljnica Peulić logo"
+                width={70}
+                height={70}
+                className="
+                  object-contain
+                  -rotate-10
+                  mb-4
+                "
+              />
 
 
-  <p className="mt-5 text-zinc-500">
-    Mjesto za dobru hranu i prijatno druženje.
-  </p>
+              <h2 className="heading text-4xl">
+                Roštiljnica Peulić
+              </h2>
 
-</div>
+
+              <p className="mt-5 text-zinc-500">
+                {desc}
+              </p>
+
+            </div>
 
 
 
@@ -45,38 +64,20 @@ export default function Footer() {
           <div>
 
             <h3 className="mb-5 font-semibold">
-              Navigacija
+              {nn}
             </h3>
 
             <div className="space-y-3 text-zinc-400">
 
-              <Link
-                href="/"
-                className="block hover:text-amber-400 transition"
-              >
-                Početna
-              </Link>
-
-              <Link
-                href="/menu"
-                className="block hover:text-amber-400 transition"
-              >
-                Meni
-              </Link>
-
-              <Link
-                href="/gallery"
-                className="block hover:text-amber-400 transition"
-              >
-                Galerija
-              </Link>
-
-              <Link
-                href="/contact"
-                className="block hover:text-amber-400 transition"
-              >
-                Kontakt
-              </Link>
+              {links.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="block hover:text-amber-400 transition"
+                >
+                  {link.name}
+                </Link>
+              )) }
 
             </div>
 
@@ -90,7 +91,7 @@ export default function Footer() {
           <div>
 
             <h3 className="mb-5 font-semibold">
-              Kontakt
+              {kk}
             </h3>
 
 
@@ -121,7 +122,7 @@ export default function Footer() {
           <div>
 
             <h3 className="mb-5 font-semibold">
-              Pronađite nas:
+              {fu}:
             </h3>
 
 
@@ -182,21 +183,36 @@ export default function Footer() {
 
 
 
-        {/* COPYRIGHT */}
+                {/* COPYRIGHT */}
 
-<div className="
-  mt-10
-  border-t
-  border-white/10
-  pt-6
-  text-center
-  text-sm
-  text-zinc-500
-">
+        <div
+          className="
+            mt-10
+            border-t
+            border-white/10
+            pt-6
+            text-center
+            text-sm
+            text-zinc-500
+            justify-center
+          "
+        >
+          <p>
+            © 2026 Roštiljnica Peulić. {rights}
+          </p>
 
-  © 2026 Roštiljnica Peulić. Sva prava zadržana.
-
-</div>
+          <p className="mt-3 text-xs text-zinc-600">
+            Website by{" "}
+            <a
+              href="https://mihajlopeulic.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-zinc-400 transition underline"
+            >
+              Mihajlo Peulić
+            </a>
+          </p>
+        </div>
 
 
       </div>

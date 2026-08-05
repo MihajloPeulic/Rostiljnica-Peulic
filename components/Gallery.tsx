@@ -7,12 +7,14 @@ const images = [
   "/images/riblji_stapici.png",
   "/images/batak.png",
   "/images/poh_pile.png",
-  "/images/basta.png",
+  "/images/basta.jpeg",
 
 ];
 
 
-export default function Gallery() {
+export default function Gallery({
+    gallery_comp
+  }: Record<string, any>) {
   return (
     <section className="py-32 reveal">
 
@@ -28,7 +30,7 @@ export default function Gallery() {
               text-amber-400
             "
           >
-            Galerija
+            {gallery_comp("title1")}
           </p>
 
 
@@ -39,7 +41,7 @@ export default function Gallery() {
               mt-5
             "
           >
-            Ukusi i atmosfera
+            {gallery_comp("title2")}
           </h2>
 
         </div>
@@ -102,7 +104,7 @@ export default function Gallery() {
 
           <ButtonLink
             href="/gallery"
-            text="Pogledaj galeriju"
+            text={gallery_comp("buttonY")}
             className="
               group
               cursor-pointer

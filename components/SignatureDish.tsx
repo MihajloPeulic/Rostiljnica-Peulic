@@ -1,7 +1,9 @@
 import Image from "next/image";
 import ButtonLink from "./ButtonLink";
 
-export default function SignatureDish() {
+export default function SignatureDish({
+    specialties
+  }: Record<string, any>) {
   return (
     <section className="relative py-40 overflow-hidden reveal">
 
@@ -34,7 +36,7 @@ export default function SignatureDish() {
             text-amber-400
           "
         >
-          Specijaliteti kuće
+          {specialties("title1")}
         </p>
 
 
@@ -47,7 +49,7 @@ export default function SignatureDish() {
             mt-8
           "
         >
-          Ukus koji predstavlja našu kuhinju
+          {specialties("title2")}
         </h2>
 
 
@@ -62,9 +64,7 @@ export default function SignatureDish() {
             leading-8
           "
         >
-          Kvalitetni sastojci, pažljiva priprema i prepoznatljivi ukusi
-          koji našu kuhinju čine posebnom. Jela pripremljena za one koji
-          uživaju u dobroj hrani.
+          {specialties("desc")}
         </p>
 
 
@@ -72,7 +72,7 @@ export default function SignatureDish() {
 
         <ButtonLink
           href="/menu"
-          text="Pogledaj meni"
+          text={specialties("buttonY")}
           className="
             group
             cursor-pointer

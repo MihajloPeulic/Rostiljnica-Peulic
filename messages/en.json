@@ -1,0 +1,463 @@
+{
+  "menu": {
+    "title": "Menu",
+    "description": "Traditional dishes, grilled specialties, and homemade cuisine prepared with carefully selected ingredients.",
+    "categories": [
+      {
+        "title": "Breakfast",
+        "items": [
+          {
+            "name": "Omelette",
+            "description": "Edamer cheese, ham"
+          },
+          {
+            "name": "Eggs with Sausage",
+            "description": "2 eggs, 3 sausages, french fries"
+          },
+          {
+            "name": "Eggs with Pork Belly",
+            "description": "2 eggs, 100 g pork belly, kajmak"
+          },
+          {
+            "name": "Polenta with Cheese"
+          },
+          {
+            "name": "Polenta with Pancetta"
+          }
+        ]
+      },
+      {
+        "title": "Cooked Meals",
+        "items": [
+          {
+            "name": "Monday - Beans (sausage or bacon)",
+            "description": ""
+          },
+          {
+            "name": "Tuesday - Goulash (pork)",
+            "description": ""
+          },
+          {
+            "name": "Wednesday - Meatballs",
+            "description": ""
+          },
+          {
+            "name": "Thursday - Paprikash or Beans",
+            "description": ""
+          },
+          {
+            "name": "Friday - Chicken Leg with Rice or Pasta Bolognese",
+            "description": ""
+          },
+          {
+            "name": "Saturday - Sarma (Cabbage Rolls) or Stuffed Peppers",
+            "description": ""
+          },
+          {
+            "name": "Veal Soup",
+            "description": ""
+          },
+          {
+            "name": "Hungarian Soup",
+            "description": ""
+          },
+          {
+            "name": "Fish Soup",
+            "description": ""
+          },
+          {
+            "name": "Pork Knuckle",
+            "description": "1 kg"
+          },
+          {
+            "name": "Boiled Veal",
+            "description": "300 g"
+          }
+        ]
+      },
+      {
+        "title": "Grilled Dishes",
+        "items": [
+          {
+            "name": "Ćevapi (Large)",
+            "description": "180 g"
+          },
+          {
+            "name": "Ćevapi (Medium)"
+          },
+          {
+            "name": "Ćevapi (Small)"
+          },
+          {
+            "name": "Leskovac-style Ćevapi",
+            "description": "200 g"
+          },
+          {
+            "name": "Shish Ćevap (Large)",
+            "description": "200 g"
+          },
+          {
+            "name": "Shish Ćevap (Small)",
+            "description": "100 g"
+          },
+          {
+            "name": "Pljeskavica",
+            "description": "180 g"
+          },
+          {
+            "name": "Pljeskavica Stuffed with Kajmak",
+            "description": "180 g"
+          },
+          {
+            "name": "Gourmet Pljeskavica",
+            "description": "meat, edamer cheese, bacon - 180 g"
+          },
+          {
+            "name": "Grilled Sausage",
+            "description": "250 g"
+          },
+          {
+            "name": "Grilled Sausage (Small)",
+            "description": "150 g"
+          },
+          {
+            "name": "Smoked Grilled Sausage",
+            "description": "250 g"
+          },
+          {
+            "name": "Smoked Grilled Sausage (Small)",
+            "description": "150 g"
+          },
+          {
+            "name": "Pork Chop",
+            "description": "250 g"
+          },
+          {
+            "name": "Pork Neck",
+            "description": "250 g"
+          },
+          {
+            "name": "Pork Skewers",
+            "description": "200 g"
+          },
+          {
+            "name": "Smoked Pork Loin",
+            "description": "250 g"
+          },
+          {
+            "name": "White Pork Loin",
+            "description": "250 g"
+          },
+          {
+            "name": "Stuffed Pork Loin",
+            "description": "250 g"
+          },
+          {
+            "name": "Chicken Skewers in Bacon",
+            "description": "200 g"
+          },
+          {
+            "name": "Chicken Breast",
+            "description": "200 g"
+          },
+          {
+            "name": "Chicken Leg & Thigh",
+            "description": "200 g"
+          },
+          {
+            "name": "Veal Cutlet",
+            "description": "200 g"
+          },
+          {
+            "name": "Pork Loin",
+            "description": "300 g"
+          },
+          {
+            "name": "Sweetbreads",
+            "description": "200 g"
+          },
+          {
+            "name": "Veal Liver",
+            "description": "200 g"
+          },
+          {
+            "name": "Veal Strips",
+            "description": "200 g"
+          },
+          {
+            "name": "Rump Steak",
+            "description": "300 g"
+          },
+          {
+            "name": "Beefsteak",
+            "description": "300 g"
+          },
+          {
+            "name": "Mixed Meat",
+            "description": "450 g"
+          },
+          {
+            "name": "\"PEULIĆ\" Platter for 2",
+            "description": "900 g"
+          },
+          {
+            "name": "\"PEULIĆ\" Platter for 3",
+            "description": "1570 g"
+          }
+        ]
+      },
+      {
+        "title": "Made-to-Order",
+        "items": [
+          {
+            "name": "Chicken Nuggets",
+            "description": "200 g"
+          },
+          {
+            "name": "Chicken Nuggets (Small)",
+            "description": "100 g"
+          },
+          {
+            "name": "Banja Luka Schnitzel",
+            "description": "200 g"
+          },
+          {
+            "name": "Cordon Bleu",
+            "description": "200 g"
+          },
+          {
+            "name": "Karadjordje Schnitzel (Pork)",
+            "description": "200 g"
+          },
+          {
+            "name": "Karadjordje Schnitzel (Chicken)",
+            "description": "200 g"
+          },
+          {
+            "name": "Karadjordje Schnitzel (Veal)",
+            "description": "200 g"
+          },
+          {
+            "name": "Wiener Schnitzel (Chicken)",
+            "description": "200 g"
+          },
+          {
+            "name": "Wiener Schnitzel (Pork)",
+            "description": "200 g"
+          },
+          {
+            "name": "Wiener Schnitzel (Veal)",
+            "description": "200 g"
+          },
+          {
+            "name": "Natur Schnitzel (Pork)",
+            "description": "200 g"
+          },
+          {
+            "name": "Natur Schnitzel (Veal)",
+            "description": "200 g"
+          }
+        ]
+      },
+      {
+        "title": "Fish",
+        "items": [
+          {
+            "name": "Carp",
+            "description": "300 g"
+          },
+          {
+            "name": "Trout",
+            "description": "300 g"
+          },
+          {
+            "name": "Hake",
+            "description": "300 g"
+          },
+          {
+            "name": "Catfish Fillet",
+            "description": "300 g"
+          }
+        ]
+      },
+      {
+        "title": "Salads",
+        "items": [
+          {
+            "name": "Fresh Tomato",
+            "description": "200 g"
+          },
+          {
+            "name": "Fresh Cucumber",
+            "description": "200 g"
+          },
+          {
+            "name": "Fresh Cabbage",
+            "description": "200 g"
+          },
+          {
+            "name": "Green Salad",
+            "description": "200 g"
+          },
+          {
+            "name": "Sauerkraut",
+            "description": "200 g"
+          },
+          {
+            "name": "Serbian Salad",
+            "description": "200 g"
+          },
+          {
+            "name": "Shopska Salad",
+            "description": "200 g"
+          },
+          {
+            "name": "Greek Salad",
+            "description": "200 g"
+          }
+        ]
+      }
+    ]
+  },
+
+  "gallery": {
+    "eyebrow": "Gallery",
+    "title": "Flavors and Atmosphere",
+    "description": "Take a glimpse into our kitchen, specialties, and the ambiance where unforgettable moments are made."
+  },
+
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Get in Touch",
+    "description": "Book a table or send us a message. It will be our pleasure to host you.",
+    "phone": "Phone",
+    "location": "Location",
+    "working_hours": "Working Hours",
+    "send_a_message": "Send a Message",
+    "button": "Send Message",
+    "name": "Name",
+    "your_message": "Your Message"
+  },
+
+  "navbar": {
+    "home": "Home",
+    "menu": "Menu",
+    "gallery": "Gallery",
+    "about": "About Us",
+    "contact": "Contact",
+    "button": "Book Now",
+    "button_phone": "Book a Table",
+    "navigation": "Navigation",
+    "fu": "Find Us",
+    "desc": "A place for great food and pleasant gatherings.",
+    "rights": "All rights reserved."
+  },
+
+  "hero": {
+    "title1": "Years of",
+    "title2": "tradition.",
+    "title3": "Signature taste.",
+    "desc": "Enjoy authentic barbecue in Prnjavor, in a relaxed atmosphere with dishes prepared according to traditional recipes.",
+    "buttonY": "View Menu",
+    "buttonW": "Book a Table",
+    "exp": "Years of Experience",
+    "guests": "Satisfied Guests",
+    "google": "Google Rating"
+  },
+
+  "favorite_dishes": {
+    "title1": "Our Specialties",
+    "title2": "House Favorites",
+    "dishes": [
+      {
+        "name": "Ćevapi",
+        "description": "Homemade grilled ćevapi, perfectly flavored thanks to carefully selected ingredients.",
+        "image": "/images/cevapi.png"
+      },
+      {
+        "name": "Pork Shank",
+        "description": "Juicy pork shank, slow-cooked to perfection and served with homemade side dishes.",
+        "image": "/images/koljenica.png"
+      },
+      {
+        "name": "Platter for Three",
+        "description": "A combination of carefully selected grilled specialties and homemade sides, perfect for sharing.",
+        "image": "/images/plata.png"
+      }
+    ]
+  },
+
+  "specialties": {
+    "title1": "House Specialties",
+    "title2": "The Taste That Defines Our Kitchen",
+    "desc": "High-quality ingredients, careful preparation, and signature flavors that make our cuisine special. Dishes prepared for those who truly enjoy great food.",
+    "buttonY": "View Menu"
+  },
+
+  "gallery_comp": {
+    "title1": "Gallery",
+    "title2": "Flavors and Atmosphere",
+    "buttonY": "View Gallery"
+  },
+
+  "guests": {
+    "title1": "Reviews",
+    "title2": "What Our Guests Say",
+    "google_rew": "Google Reviews",
+    "reviews": [
+      {
+        "name": "Lilly Žunić",
+        "initial": "L",
+        "text": "Best ćevapi in Prnjavor! The service is very fast and polite, and the interior is beautiful."
+      },
+      {
+        "name": "David Blanc",
+        "initial": "D",
+        "text": "Excellent food and friendly staff. It's easy to reach, with convenient parking in front. Highly recommended!"
+      },
+      {
+        "name": "Mišo Mitrić",
+        "initial": "M",
+        "text": "Great food, wonderful ambiance, reasonably priced, excellent service. Nothing but praise!"
+      }
+    ]
+  },
+
+  "maps": {
+    "title1": "Visit Us",
+    "title2": "Come and Taste the Quality",
+    "desc": "Drop by for lunch, dinner, or a special gathering. We await you with great food and a welcoming atmosphere.",
+    "buttonY": "Open Maps",
+    "location": "Location",
+    "working_hours": "Working Hours",
+    "phone": "Phone",
+    "every_day": "Every day from"
+  },
+
+  "final_cta": {
+    "title1": "Book Today",
+    "title2": "See You at the Table",
+    "buttonY": "Book a Table"
+  },
+
+
+  
+  "about": {
+    "title1": "Discover Peulić",
+    "title2": "The Tradition of Authentic Barbecue",
+    "desc": "A local favorite in Prnjavor known for top-quality barbecue, fresh meat, and a warm, welcoming atmosphere. Great food and satisfied guests are our best recommendation.",
+    "st": "Our Story",
+    "st2": "Our Recipe for Great Barbecue",
+    "sc1": "Our secret is simple: always fresh, locally sourced meat and traditional preparation with no shortcuts. It's a standard we never compromise on.",
+    "sc2": "Whether you're dropping by for a quick lunch, a family gathering, or a relaxed evening with friends, you can expect a welcoming atmosphere and fast, friendly service.",
+    "c1t": "Locally Sourced Meat",
+    "c2t": "Authentic Taste",
+    "c3t": "Welcoming Atmosphere",
+    "c1c": "We strictly use fresh, high-quality meat from trusted local suppliers.",
+    "c2c": "We preserve the authentic preparation methods that give our barbecue its signature flavor.",
+    "c3c": "A relaxed vibe and attentive staff that keep our guests coming back time and time again.",
+    "lt": "Your Table Awaits",
+    "ld": "Visit us and enjoy the best barbecue in town. We look forward to welcoming you."
+  }
+
+}

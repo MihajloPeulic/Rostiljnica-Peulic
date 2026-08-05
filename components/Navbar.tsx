@@ -1,22 +1,36 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
-export default function Navbar() {
+export type NavLink = {
+  name: string;
+  href: string;
+};
+
+export type NavbarProps = {
+  links: NavLink[];
+};
+
+export default function Navbar(
+  { 
+    links,
+    bb,
+    bbp
+  }: NavbarProps & {
+    bb: string;
+    bbp: string;
+  }
+) {
 
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
-  const links = [
-    { name: "Početna", href: "/" },
-    { name: "Meni", href: "/menu" },
-    { name: "Galerija", href: "/gallery" },
-    { name: "O nama", href: "/about" },
-    { name: "Kontakt", href: "/contact" },
-  ];
+  
+
+
 
   return (
     <>
@@ -161,7 +175,7 @@ export default function Navbar() {
                   hover:-translate-y-1
                 "
               >
-                Rezerviši
+                {bb}
               </Link>
 
 
@@ -319,7 +333,7 @@ export default function Navbar() {
         tracking-[0.25em]
       "
     >
-      Rezerviši sto
+      {bbp}
     </button>
 
 

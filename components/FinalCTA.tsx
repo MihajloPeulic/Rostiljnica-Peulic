@@ -1,7 +1,11 @@
 import Link from "next/link";
 import ButtonLink from "./ButtonLink";
 
-export default function FinalCTA() {
+export default function FinalCTA(
+  {
+    final_cta
+  }: Record<string, any>
+) {
   return (
     <section className="relative py-40 overflow-hidden reveal">
       <img
@@ -16,18 +20,18 @@ export default function FinalCTA() {
       <div className="relative max-w-4xl mx-auto text-center px-6">
 
         <p className="uppercase tracking-[0.5em] text-amber-400">
-          Rezerviši danas
+          {final_cta("title1")}
         </p>
 
 
         <h2 className="font-heading text-7xl mt-8">
-          Vidimo se za stolom
+          {final_cta("title2")}
         </h2>
 
 
        <ButtonLink
   href="/contact"
-  text="Rezerviši sto"
+  text={final_cta("buttonY")}
   className="
     group
     cursor-pointer

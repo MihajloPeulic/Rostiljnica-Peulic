@@ -3,29 +3,13 @@ import Link from "next/link";
 
 import ButtonLink from "./ButtonLink";
 
-export default function FeaturedDishes() {
-  const dishes = [
-    {
-      name: "Ćevapi",
-      description:
-        "Domaći ćevapi sa roštilja, savršenog ukusa zahvaljujući pažljivo biranim sastojcima.",
-      image: "/images/cevapi.png",
-    },
+export default function FeaturedDishes(
+  {
+    featured_dishes
+  }: Record<string, any>
+) {
+  const dishes = featured_dishes.raw("dishes") as {name:string; description: string, image: string}[]
 
-    {
-      name: "Koljenica",
-      description:
-        "Sočna svinjska koljenica, sporo kuvana do savršenstva i servirana uz domaće priloge.",
-     image:"/images/koljenica.png"
-    },
-
-    {
-      name: "Plata za troje",
-      description:
-        "Kombinacija pažljivo odabranih roštiljskih specijaliteta i domaćih priloga, idealna za zajedničko uživanje.",
-      image:"/images/plata.png"
-    },
-  ];
 
 
   return (
@@ -55,7 +39,7 @@ export default function FeaturedDishes() {
               text-amber-400
             "
           >
-            Naši specijaliteti
+            {featured_dishes("title1")}
           </p>
 
 
@@ -66,7 +50,7 @@ export default function FeaturedDishes() {
               mt-2
             "
           >
-            Favoriti kuće
+            {featured_dishes("title2")}
           </h2>
 
         </div>
@@ -103,6 +87,8 @@ export default function FeaturedDishes() {
                 src={dish.image}
                 alt={dish.name}
                 fill
+               
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="
                   object-cover
                   group-hover:scale-110
