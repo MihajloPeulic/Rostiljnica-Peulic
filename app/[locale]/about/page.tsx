@@ -1,5 +1,6 @@
 import { ShieldCheck, ChefHat, UsersRound } from "lucide-react";
 import { getTranslations } from "next-intl/server";
+import Image from "next/image";
 
 import type { Metadata } from "next";
 
@@ -97,23 +98,25 @@ export default async function AboutPage() {
             "
           >
             <div
-              className="
-                rounded-[40px]
-                overflow-hidden
-                border
-                border-white/10
-                h-[500px]
-              "
-            >
-              <img
-                src="/images/gornji_sprat.png"
-                alt="Ambijent Roštiljnice Peulić Prnjavor"
-                className="
-                  w-full
-                  h-full
-                  object-cover
-                "
-              />
+  className="
+    relative
+    rounded-[40px]
+    overflow-hidden
+    border
+    border-white/10
+    h-[500px]
+  "
+>
+              <Image
+  src="/images/gornji_sprat.jpg"
+  alt="Ambijent Roštiljnice Peulić Prnjavor"
+  fill
+  sizes="(max-width: 1024px) 100vw, 50vw"
+  quality={80}
+  className="
+    object-cover
+  "
+/>
             </div>
 
             <div className="text-center lg:text-left">
@@ -251,17 +254,16 @@ export default async function AboutPage() {
               h-[450px]
             "
           >
-            <img
-              src="/images/hero_img1.jpg"
-              alt="Ukusna hrana i roštilj"
-              className="
-                absolute
-                inset-0
-                w-full
-                h-full
-                object-cover
-              "
-            />
+            <Image
+  src="/images/hero_img1.jpg"
+  alt="Ukusna hrana i roštilj"
+  fill
+  sizes="100vw"
+  quality={80}
+  className="
+    object-cover
+  "
+/>
 
             <div
               className="

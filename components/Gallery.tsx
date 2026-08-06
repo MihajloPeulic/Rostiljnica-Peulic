@@ -2,12 +2,12 @@ import Image from "next/image";
 import ButtonLink from "./ButtonLink";
 
 const images = [
-  "/images/vjesalice.png",
-  "/images/gornji_sprat.png",
-  "/images/riblji_stapici.png",
-  "/images/batak.png",
-  "/images/poh_pile.png",
-  "/images/basta.jpeg",
+  "/images/vjesalice.jpg",
+  "/images/gornji_sprat.jpg",
+  "/images/riblji_stapici.jpg",
+  "/images/batak.jpg",
+  "/images/poh_pile.jpg",
+  "/images/basta.jpg",
 
 ];
 

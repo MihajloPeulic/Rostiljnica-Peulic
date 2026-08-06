@@ -61,8 +61,7 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
                   ? "(max-width: 1024px) 100vw, 66vw"
                   : "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               }
-              quality={index === 1 ? 100 : 85}
-              priority={index < 3} // Prve 3 slike učitavamo prioritetno za bolje performanse i SEO
+              priority={index === 0} // Prve 3 slike učitavamo prioritetno za bolje performanse i SEO
               className="
                 object-cover
                 group-hover:scale-110
@@ -107,7 +106,7 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
               src={images[selectedIndex]}
               alt="Preview"
               fill
-              sizes="90vw"
+              sizes="(max-width: 768px) 100vw, 90vw"
               priority
               className="
                 rounded-3xl

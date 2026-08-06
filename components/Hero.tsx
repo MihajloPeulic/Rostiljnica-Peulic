@@ -30,7 +30,7 @@ export default function Hero(
       {/* BACKGROUND IMAGE */}
 
       <Image
-        src="/images/hero_img1.jpg"
+        src="/images/hero_img1_bg.jpg"
         alt="Roštiljnica Peulić"
         fill
         priority
