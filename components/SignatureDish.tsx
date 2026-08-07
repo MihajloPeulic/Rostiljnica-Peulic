@@ -8,7 +8,7 @@ export default function SignatureDish({
     <section className="relative py-40 overflow-hidden reveal">
 
       <Image
-        src="/images/plata.png"
+        src="/images/plata.jpg"
         alt="Specijalitet kuće"
         fill
         className="object-cover"

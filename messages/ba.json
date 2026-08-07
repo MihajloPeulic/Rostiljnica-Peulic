@@ -373,17 +373,17 @@
     {
       "name": "Ćevapi",
       "description": "Domaći ćevapi sa roštilja, savršenog ukusa zahvaljujući pažljivo biranim sastojcima.",
-      "image": "/images/cevapi.png"
+      "image": "/images/cevapi.jpg"
     },
     {
       "name": "Koljenica",
       "description": "Sočna svinjska koljenica, sporo kuvana do savršenstva i servirana uz domaće priloge.",
-      "image": "/images/koljenica.png"
+      "image": "/images/koljenica.jpg"
     },
     {
       "name": "Plata za troje",
       "description": "Kombinacija pažljivo odabranih roštiljskih specijaliteta i domaćih priloga, idealna za zajedničko uživanje.",
-      "image": "/images/plata.png"
+      "image": "/images/plata.jpg"
     }
   ]
   },
