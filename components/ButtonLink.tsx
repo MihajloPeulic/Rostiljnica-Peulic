@@ -11,7 +11,6 @@ type ButtonLinkProps = {
 export default function ButtonLink({
   href,
   text,
-  icon,
   external = false,
   className
 }: ButtonLinkProps) {
@@ -19,11 +18,10 @@ export default function ButtonLink({
 
   const content = (
     <>
-      {icon}
 
       {text}
 
-      <span
+      {/* <span
         className="
           transition-transform
           duration-300
@@ -31,7 +29,7 @@ export default function ButtonLink({
         "
       >
         →
-      </span>
+      </span> */}
     </>
   );
 
