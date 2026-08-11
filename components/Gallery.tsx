@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ButtonLink from "./ButtonLink";
+import { getTranslations } from "next-intl/server";
 
 const images = [
   "/images/vjesalice.jpg",
@@ -12,9 +13,9 @@ const images = [
 ];
 
 
-export default function Gallery({
-    gallery_comp
-  }: Record<string, any>) {
+export default async function Gallery({locale}: {locale: string}) {
+  const gallery_comp = await getTranslations("gallery_comp");
+
   return (
     <section className="py-32 reveal">
 
@@ -103,7 +104,7 @@ export default function Gallery({
         <div className="mt-16 flex justify-center">
 
           <ButtonLink
-            href="/gallery"
+            href={`/${locale}/gallery`}
             text={gallery_comp("buttonY")}
             className="
               group

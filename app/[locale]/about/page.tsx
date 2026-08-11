@@ -43,7 +43,7 @@ export default async function AboutPage() {
   const t = await getTranslations("about");
 
   return (
-    <main className="min-h-screen bg-[#09090b] text-white">
+    <main className="min-h-screen text-white">
       <section className="pt-32 pb-32">
         <div className="container-page">
 

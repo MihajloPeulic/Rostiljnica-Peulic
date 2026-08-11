@@ -36,14 +36,14 @@ export default function ButtonLink({
 
   if (external) {
     return (
-      <a
+      <Link
         href={href}
         target="_blank"
         rel="noopener noreferrer"
         className={classNameing}
       >
         {content}
-      </a>
+      </Link>
     );
   }
 

@@ -127,38 +127,12 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
 
           <SmoothScroll />
+            <div className="pointer-events-none fixed -top-40 -left-40 h-[500px] w-[500px] rounded-full bg-amber-500/20 blur-3xl transform-gpu will-change-transform -z-10" />
+            <div className="pointer-events-none fixed bottom-0 right-0 h-[450px] w-[450px] rounded-full bg-red-600/20 blur-3xl transform-gpu will-change-transform -z-10" />
 
-          <PageWrapper>
-
-            {/* BACKGROUND BLOBS */}
-
-            <div
-              className="
-                fixed
-                -top-40
-                -left-40
-                w-[500px]
-                h-[500px]
-                rounded-full
-                bg-amber-500/20
-                blur-[120px]
-                pointer-events-none
-              "
-            />
-
-            <div
-              className="
-                fixed
-                bottom-0
-                right-0
-                w-[450px]
-                h-[450px]
-                rounded-full
-                bg-red-600/20
-                blur-[120px]
-                pointer-events-none
-              "
-            />
+          <PageWrapper locale={locale}>
+              
+            
 
 
             {children}

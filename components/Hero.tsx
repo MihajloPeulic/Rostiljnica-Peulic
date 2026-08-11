@@ -1,14 +1,15 @@
 import Image from "next/image";
 import ButtonLink from "./ButtonLink";
+import { getTranslations } from "next-intl/server";
 
-
-
-export default function Hero(
+export default async function Hero(
   {
-    hero
-  }: Record<string, any>
+    locale
+  }: {
+    locale: string;
+  }
 ) {
-
+  const hero = await getTranslations("hero"); 
 
 
   return (
@@ -146,7 +147,7 @@ export default function Hero(
         >
 
           <ButtonLink
-            href="/menu"
+            href={`/${locale}/menu`}
             text={hero("buttonY")}
             className="
               group
@@ -170,7 +171,7 @@ export default function Hero(
 
 
             <ButtonLink
-              href="/contact"
+              href={`/${locale}/contact`}
               text={hero("buttonW")}
               className="
                 group

@@ -1,13 +1,17 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 
 import ButtonLink from "./ButtonLink";
 
-export default function FeaturedDishes(
+export default async function FeaturedDishes(
   {
-    featured_dishes
-  }: Record<string, any>
+    locale
+  }: {
+    locale: string;
+  }
 ) {
-  const dishes = featured_dishes.raw("dishes") as {name:string; description: string, image: string}[]
+  const t = await getTranslations("favorite_dishes");
+  const dishes = t.raw("dishes") as {name:string; description: string, image: string}[]
 
 
 
@@ -38,7 +42,7 @@ export default function FeaturedDishes(
               text-amber-400
             "
           >
-            {featured_dishes("title1")}
+            {t("title1")}
           </p>
 
 
@@ -49,7 +53,7 @@ export default function FeaturedDishes(
               mt-2
             "
           >
-            {featured_dishes("title2")}
+            {t("title2")}
           </h2>
 
         </div>
@@ -165,7 +169,7 @@ export default function FeaturedDishes(
         >
 
           <ButtonLink
-            href="/menu"
+            href={`/${locale}/menu`}
             text="Pogledaj meni"
             className="
               group

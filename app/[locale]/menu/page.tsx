@@ -52,7 +52,7 @@ export default async function MenuPage() {
 
   return (
     <>
-      <main className="min-h-screen bg-[#09090b] pt-36 pb-24">
+      <main className="min-h-screen pt-36 pb-24">
         <div className="container-page max-w-6xl">
 
           <div className="mb-20 text-center">

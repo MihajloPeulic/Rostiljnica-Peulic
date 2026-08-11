@@ -1,28 +1,7 @@
-const reviews = [
-  {
-    name: "Lilly Žunić",
-    initial: "L",
-    text: "Najbolji ćevapi u Prnjavoru! Usluga je veoma brza i ljubazna, a enterijer je predivan.",
-  },
-  {
-    name: "David Blanc",
-    initial: "D",
-    text: "Одлична храна i љубазно особље. Лако је доћи до објекта и погодан је паркинг испред. Топло препоручујем!",
-  },
-  {
-    name: "Mišo Mitrić",
-    initial: "M",
-    text: "Odlična hrana, sjajan ambijent, nije previše skupo, odlična usluga. Samo pohvale!",
-  },
-];
+import { getTranslations } from "next-intl/server";
 
-
-export default function Reviews(
-  {
-    guests
-  }: Record<string, any>
-) {
-
+export default async function Reviews({locale}: {locale: string}) {
+  const guests = await getTranslations("guests");
   const reviews = guests.raw("reviews") as {name: string; text: string; initial: number;}[]
 
   

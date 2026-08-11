@@ -1,9 +1,10 @@
 import Image from "next/image";
+import {getTranslations} from "next-intl/server";
 import ButtonLink from "./ButtonLink";
 
-export default function SignatureDish({
-    specialties
-  }: Record<string, any>) {
+export default async function SignatureDish({locale}: {locale: string}) {
+  const specialties_translations = await getTranslations("specialties");
+
   return (
     <section className="relative py-40 overflow-hidden reveal">
 
@@ -36,7 +37,7 @@ export default function SignatureDish({
             text-amber-400
           "
         >
-          {specialties("title1")}
+          {specialties_translations("title1")}
         </p>
 
 
@@ -49,7 +50,7 @@ export default function SignatureDish({
             mt-8
           "
         >
-          {specialties("title2")}
+          {specialties_translations("title2")}
         </h2>
 
 
@@ -64,15 +65,15 @@ export default function SignatureDish({
             leading-8
           "
         >
-          {specialties("desc")}
+          {specialties_translations("desc")}
         </p>
 
 
 
 
         <ButtonLink
-          href="/menu"
-          text={specialties("buttonY")}
+          href={`/${locale}/menu`}
+          text={specialties_translations("buttonY")}
           className="
             group
             cursor-pointer

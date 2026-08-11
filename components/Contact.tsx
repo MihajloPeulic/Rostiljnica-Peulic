@@ -1,12 +1,11 @@
-import ButtonLink from "./ButtonLink";
+
 import { MapPin, Phone, Clock } from "lucide-react";
+import {getTranslations} from "next-intl/server";
+import Link from "./ButtonLink";
 
+export default async function Contact({locale}: {locale: string}) {
+  const maps = await getTranslations("maps");
 
-export default function Contact(
-  {
-    maps
-  }: Record<string, any>
-) {
   return (
     <section className="py-20 md:py-32 reveal overflow-hidden">
 
@@ -212,7 +211,7 @@ export default function Contact(
 
               <div className="w-full sm:w-auto">
 
-                <ButtonLink
+                <Link
                   href="https://maps.app.goo.gl/QbZffvpWEfow7RcE8"
                   text={maps("buttonY")}
                   className="

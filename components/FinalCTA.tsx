@@ -1,11 +1,10 @@
 import Link from "next/link";
 import ButtonLink from "./ButtonLink";
+import { getTranslations } from "next-intl/server";
 
-export default function FinalCTA(
-  {
-    final_cta
-  }: Record<string, any>
-) {
+export default async function FinalCTA({locale}: {locale: string}) {
+  const final_cta = await getTranslations("final_cta");
+
   return (
     <section className="relative py-40 overflow-hidden reveal">
       <img
@@ -30,35 +29,35 @@ export default function FinalCTA(
 
 
        <ButtonLink
-  href="/contact"
-  text={final_cta("buttonY")}
-  className="
-    group
-    cursor-pointer
-    mt-12
-    inline-flex
-    items-center
-    justify-center
-    gap-4
-    rounded-full
-    border
-    border-amber-400/40
-    bg-amber-500
-    px-10
-    py-5
-    text-xs
-    uppercase
-    tracking-[0.25em]
-    font-semibold
-    text-black
-    transition
-    duration-300
-    hover:bg-amber-400
-    hover:scale-105
-    hover:-translate-y-1
-  "
-  icon={""}
-/>
+          href={`/${locale}/contact`}
+          text={final_cta("buttonY")}
+          className="
+            group
+            cursor-pointer
+            mt-12
+            inline-flex
+            items-center
+            justify-center
+            gap-4
+            rounded-full
+            border
+            border-amber-400/40
+            bg-amber-500
+            px-10
+            py-5
+            text-xs
+            uppercase
+            tracking-[0.25em]
+            font-semibold
+            text-black
+            transition
+            duration-300
+            hover:bg-amber-400
+            hover:scale-105
+            hover:-translate-y-1
+          "
+          icon={""}
+        />
 
 
       </div>

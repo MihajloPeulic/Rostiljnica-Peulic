@@ -50,7 +50,7 @@ export default async function ContactPage() {
   
 
   return (
-    <main className="min-h-screen bg-[#09090b] text-white">
+    <main className="min-h-screen text-white">
  
 
       <section className="pt-40 pb-32">

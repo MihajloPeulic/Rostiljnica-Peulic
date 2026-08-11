@@ -68,7 +68,7 @@ export default async function GalleryPage() {
  
 
   return (
-    <main className="min-h-screen bg-[#09090b] text-white">
+    <main className="min-h-screen text-white">
 
 
       <section className="pt-40 pb-32">
