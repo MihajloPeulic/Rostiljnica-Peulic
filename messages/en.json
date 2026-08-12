@@ -372,17 +372,17 @@
       {
         "name": "Ćevapi",
         "description": "Homemade grilled ćevapi, perfectly flavored thanks to carefully selected ingredients.",
-        "image": "/images/cevapi.png"
+        "image": "/images/cevapi.jpg"
       },
       {
         "name": "Pork Shank",
         "description": "Juicy pork shank, slow-cooked to perfection and served with homemade side dishes.",
-        "image": "/images/koljenica.png"
+        "image": "/images/koljenica.jpg"
       },
       {
         "name": "Platter for Three",
-        "description": "A combination of carefully selected grilled specialties and homemade sides, perfect for sharing.",
-        "image": "/images/plata.png"
+        "description": "A combination of grilled specialties and homemade sides, perfect for sharing.",
+        "image": "/images/plata.jpg"
       }
     ]
   },
@@ -408,17 +408,17 @@
       {
         "name": "Lilly Žunić",
         "initial": "L",
-        "text": "Best ćevapi in Prnjavor! The service is very fast and polite, and the interior is beautiful."
+        "text": "Best ćevapi in Prnjavor! The service is very fast and polite, and the interior is beautiful. Highly recommended!"
       },
       {
         "name": "David Blanc",
         "initial": "D",
-        "text": "Excellent food and friendly staff. It's easy to reach, with convenient parking in front. Highly recommended!"
+        "text": "Excellent food and friendly staff. It's easy to reach, with convenient parking in front. Definitely a place to return to!"
       },
       {
         "name": "Mišo Mitrić",
         "initial": "M",
-        "text": "Great food, wonderful ambiance, reasonably priced, excellent service. Nothing but praise!"
+        "text": "Great food, wonderful ambiance, reasonably priced and excellent service. Nothing but praise!"
       }
     ]
   },
