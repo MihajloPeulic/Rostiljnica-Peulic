@@ -2,7 +2,7 @@ export const site = {
   name: "Roštiljnica Peulić",
   phone: "+387 51 663 456",
   phoneHref: "tel:+38751663456",
-  email: "info@rostiljnicapeulic.com",
+  email: "kontakt@rostiljnicapeulic.com",
   address: "Ulica Doktora Slavka Šuška 54, 78430 Prnjavor",
   hours: "07:00–20:00",
   mapsUrl: "https://maps.app.goo.gl/QbZffvpWEfow7RcE8",

@@ -1,5 +1,6 @@
 "use server";
 import { Resend } from "resend";
+import { site } from "@/lib/site";
 
 export async function sendEmail(formData: FormData) {
   const isEnglish = formData.get("locale") === "en";
@@ -13,8 +14,8 @@ export async function sendEmail(formData: FormData) {
   try {
     const resend = new Resend(process.env.RESEND_API_KEY);
     const { error } = await resend.emails.send({
-      from: process.env.CONTACT_FROM_EMAIL || "Roštiljnica Peulić <onboarding@resend.dev>",
-      to: process.env.CONTACT_TO_EMAIL || "mihajlopeulic7@gmail.com",
+      from: process.env.CONTACT_FROM_EMAIL || "Roštiljnica Peulić <kontakt@rostiljnicapeulic.com>",
+      to: site.email,
       replyTo: email,
       subject: `Poruka sa sajta: ${name.replace(/[\r\n]/g, " ")}`,
       text: `Ime: ${name}\nEmail: ${email}\n\nPoruka:\n${message}`,

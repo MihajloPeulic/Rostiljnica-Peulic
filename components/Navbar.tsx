@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { Menu, X, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { site } from "@/lib/site";
@@ -14,6 +14,6 @@ export default function Navbar() {
   return <header className="site-header"><div className="header-inner container-page">
     <Link href="/" className="brand" aria-label={locale === "en" ? "Peulić Grill – home" : "Roštiljnica Peulić – početna"}><Image src="/images/logo_nav.png" alt="" width={48} height={48} priority /><span>PEULIĆ<small>{locale === "en" ? "GRILL · PRNJAVOR" : "ROŠTILJNICA · PRNJAVOR"}</small></span></Link>
     <nav className="desktop-nav" aria-label={t("navigation")}>{links.map(({ href, key }) => <Link key={key} href={href} aria-current={pathname === href ? "page" : undefined}>{t(key)}</Link>)}</nav>
-    <div className="header-actions"><Link className="language-link" href={pathname} locale={locale === "ba" ? "en" : "ba"} aria-label={locale === "ba" ? "English" : "Bosanski"}>{locale === "ba" ? "EN" : "BA"}</Link><a className="header-call" href={site.phoneHref}>{t("button")} <ArrowUpRight size={16} aria-hidden="true" /></a><button className="menu-toggle" type="button" onClick={() => setOpen(!open)} aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="mobile-menu">{open ? <X /> : <Menu />}</button></div>
+    <div className="header-actions"><Link className="language-link" href={pathname} locale={locale === "ba" ? "en" : "ba"} aria-label={locale === "ba" ? "English" : "Bosanski"}>{locale === "ba" ? "EN" : "BA"}</Link><a className="header-call" href={site.phoneHref}>{t("button")} <ArrowUpRight size={16} aria-hidden="true" /></a><button className="menu-toggle" type="button" onClick={() => setOpen(!open)} aria-label={open ? (locale === "en" ? "Close menu" : "Zatvori meni") : (locale === "en" ? "Open menu" : "Otvori meni")} aria-expanded={open} aria-controls="mobile-menu"><span className="menu-toggle-icon" aria-hidden="true"><span /><span /><span /></span></button></div>
   </div>{open && <nav id="mobile-menu" className="mobile-nav" aria-label={t("navigation")}>{links.map(({ href, key }) => <Link key={key} href={href} onClick={() => setOpen(false)} aria-current={pathname === href ? "page" : undefined}>{t(key)}</Link>)}<a href={site.phoneHref} className="mobile-call">{t("button_phone")} · {site.phone}</a></nav>}</header>;
 }

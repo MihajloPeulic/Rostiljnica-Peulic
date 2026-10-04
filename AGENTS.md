@@ -53,8 +53,8 @@ Godina osnivanja prikazana na početnoj stranici je 2012. Sav vidljivi sadržaj 
 Forma predaje `FormData` serverskoj akciji. Akcija provjerava obavezna polja, email i granice dužine, zatim šalje tekstualni email preko Resenda. Uspjeh i greška se prikazuju u formi; nakon uspjeha polja se prazne. Rezervacije se primarno iniciraju telefonskim linkom.
 
 - `RESEND_API_KEY`: obavezan za slanje poruka.
-- `CONTACT_FROM_EMAIL`: opciona verifikovana Resend adresa pošiljaoca; ako izostane, koristi se testna `onboarding@resend.dev`, koja nije pogodna za produkcijsko slanje na proizvoljne adrese.
-- `CONTACT_TO_EMAIL`: opciona adresa primaoca; postojeći fallback je konfigurisan u `actions/sendEmail.ts`.
+- `CONTACT_FROM_EMAIL`: opciona verifikovana Resend adresa pošiljaoca; podrazumijevana je `Roštiljnica Peulić <kontakt@rostiljnicapeulic.com>` i zahtijeva verifikovan domen u Resendu.
+- Sve poruke iz forme šalju se na `kontakt@rostiljnicapeulic.com`.
 - Tajne čuvati samo u `.env.local` ili u postavkama hostinga. Ne unositi ih u Git.
 
 Prije objave uživo potvrditi domenu, telefon, adresu, radno vrijeme, primaoca poruka, Resend verified sender i sadržaj jelovnika. Nije implementirano online rezervisanje niti cijene u jelovniku; UI to ne obećava.
