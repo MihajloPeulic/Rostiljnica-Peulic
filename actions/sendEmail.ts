@@ -1,45 +1,25 @@
 "use server";
-
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function sendEmail(formData: FormData) {
-  const name = formData.get("name");
-  const email = formData.get("email");
-  const message = formData.get("message");
-
-  if (!name || !email || !message) {
-    return {
-      success: false,
-      message: "Molimo popunite sva polja."
-    };
+  const isEnglish = formData.get("locale") === "en";
+  const name = String(formData.get("name") ?? "").trim();
+  const email = String(formData.get("email") ?? "").trim();
+  const message = String(formData.get("message") ?? "").trim();
+  if (!name || name.length > 120 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 254 || !message || message.length > 5000) {
+    return { success: false, message: isEnglish ? "Please check the information you entered." : "Molimo provjerite unesene podatke." };
   }
-
+  if (!process.env.RESEND_API_KEY) return { success: false, message: isEnglish ? "Messaging is currently unavailable. Please call us." : "Slanje poruka trenutno nije dostupno. Pozovite nas telefonom." };
   try {
-    await resend.emails.send({
-      from: "Restoran <onboarding@resend.dev>",
-      to: "mihajlopeulic7@gmail.com",
-      replyTo: email.toString(),
-      subject: `Nova poruka od ${name}`,
-      html: `
-        <h2>Nova kontakt poruka</h2>
-        <p><strong>Ime:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Poruka:</strong></p>
-        <p>${message}</p>
-      `,
+    const resend = new Resend(process.env.RESEND_API_KEY);
+    const { error } = await resend.emails.send({
+      from: process.env.CONTACT_FROM_EMAIL || "Roštiljnica Peulić <onboarding@resend.dev>",
+      to: process.env.CONTACT_TO_EMAIL || "mihajlopeulic7@gmail.com",
+      replyTo: email,
+      subject: `Poruka sa sajta: ${name.replace(/[\r\n]/g, " ")}`,
+      text: `Ime: ${name}\nEmail: ${email}\n\nPoruka:\n${message}`,
     });
-
-    return {
-      success: true,
-      message: "Poruka je uspješno poslana!"
-    };
-
-  } catch (error) {
-    return {
-      success: false,
-      message: "Greška prilikom slanja poruke."
-    };
-  }
+    if (error) throw error;
+    return { success: true, message: isEnglish ? "Your message has been sent!" : "Poruka je uspješno poslana!" };
+  } catch { return { success: false, message: isEnglish ? "The message could not be sent. Please try again or call us." : "Poruka nije poslana. Pokušajte ponovo ili nas pozovite." }; }
 }

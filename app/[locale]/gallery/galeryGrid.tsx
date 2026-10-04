@@ -1,234 +1,35 @@
 "use client";
-
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { useLocale } from "next-intl";
 
-interface GalleryGridProps {
-  images: string[];
-}
-
-export default function GalleryGrid({ images }: GalleryGridProps) {
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-
-  const nextImage = () => {
-    if (selectedIndex === null) return;
-    setSelectedIndex((selectedIndex + 1) % images.length);
-  };
-
-  const prevImage = () => {
-    if (selectedIndex === null) return;
-    setSelectedIndex((selectedIndex - 1 + images.length) % images.length);
-  };
-
-  return (
-    <>
-      {/* GRID */}
-      <div
-        className="
-          grid
-          grid-cols-1
-          sm:grid-cols-2
-          lg:grid-cols-3
-          gap-6
-        "
-      >
-        {images.map((image, index) => (
-          <button
-            key={index}
-            onClick={() => setSelectedIndex(index)}
-            className={`
-              relative
-              overflow-hidden
-              rounded-[32px]
-              border
-              border-white/10
-              cursor-pointer
-              group
-              aspect-square
-              ${
-                index === 1
-                  ? "lg:row-span-2 lg:h-[870px] lg:aspect-auto"
-                  : ""
-              }
-            `}
-          >
-            <Image
-              src={image}
-              alt="Roštiljnica Peulić"
-              fill
-              sizes={
-                index === 1
-                  ? "(max-width: 1024px) 100vw, 66vw"
-                  : "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              }
-              priority={index === 0} // Prve 3 slike učitavamo prioritetno za bolje performanse i SEO
-              className="
-                object-cover
-                group-hover:scale-110
-                transition
-                duration-700
-              "
-            />
-          </button>
-        ))}
-      </div>
-
-      {/* LIGHTBOX MODAL */}
-      {selectedIndex !== null && (
-        <div
-          onClick={() => setSelectedIndex(null)}
-          className="
-            fixed
-            inset-0
-            z-[100]
-            bg-black/90
-            flex
-            items-center
-            justify-center
-            p-6
-          "
-        >
-          {/* PREVIEW IMAGE CONTAINER */}
-          <div
-            onClick={(e) => e.stopPropagation()}
-            className="
-              relative
-              max-h-[75vh]
-              max-w-[90vw]
-              w-full
-              h-full
-              flex
-              items-center
-              justify-center
-            "
-          >
-            <Image
-              src={images[selectedIndex]}
-              alt="Preview"
-              fill
-              sizes="(max-width: 768px) 100vw, 90vw"
-              priority
-              className="
-                rounded-3xl
-                object-contain
-              "
-            />
-          </div>
-
-          {/* MOBILE NAVIGATION */}
-          <div
-            className="
-              flex
-              min-[830px]:hidden
-              absolute
-              bottom-6
-              items-center
-              gap-28
-              z-10
-            "
-          >
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                prevImage();
-              }}
-              className="
-                cursor-pointer
-                text-white
-                text-6xl
-                hover:text-amber-400
-                transition
-              "
-            >
-              ‹
-            </button>
-
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                nextImage();
-              }}
-              className="
-                cursor-pointer
-                text-white
-                text-6xl
-                hover:text-amber-400
-                transition
-              "
-            >
-              ›
-            </button>
-          </div>
-
-          {/* DESKTOP LEFT */}
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              prevImage();
-            }}
-            className="
-              hidden
-              min-[830px]:block
-              cursor-pointer
-              absolute
-              left-4
-              xl:left-10
-              top-1/2
-              -translate-y-1/2
-              text-white
-              text-6xl
-              hover:text-amber-400
-              transition
-              z-10
-            "
-          >
-            ‹
-          </button>
-
-          {/* DESKTOP RIGHT */}
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              nextImage();
-            }}
-            className="
-              hidden
-              min-[830px]:block
-              cursor-pointer
-              absolute
-              right-4
-              xl:right-10
-              top-1/2
-              -translate-y-1/2
-              text-white
-              text-6xl
-              hover:text-amber-400
-              transition
-              z-10
-            "
-          >
-            ›
-          </button>
-
-          {/* CLOSE */}
-          <button
-            onClick={() => setSelectedIndex(null)}
-            className="
-              cursor-pointer
-              absolute
-              top-6
-              right-6
-              text-white
-              text-5xl
-              hover:text-amber-400
-              transition
-              z-10
-            "
-          >
-            ×
-          </button>
-        </div>
-      )}
-    </>
-  );
+export default function GalleryGrid({ images }: { images: { src: string; alt: string }[] }) {
+  const locale = useLocale();
+  const [selected, setSelected] = useState<number | null>(null);
+  const isOpen = selected !== null;
+  const closeRef = useRef<HTMLButtonElement>(null);
+  const previousFocus = useRef<HTMLElement | null>(null);
+  useEffect(() => {
+    if (!isOpen) return;
+    previousFocus.current = document.activeElement as HTMLElement;
+    closeRef.current?.focus();
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setSelected(null);
+      if (e.key === "ArrowRight") setSelected(index => index === null ? null : (index + 1) % images.length);
+      if (e.key === "ArrowLeft") setSelected(index => index === null ? null : (index - 1 + images.length) % images.length);
+      if (e.key === "Tab") {
+        const controls = Array.from(document.querySelectorAll<HTMLButtonElement>(".lightbox button"));
+        const index = controls.indexOf(document.activeElement as HTMLButtonElement);
+        if (e.shiftKey && index <= 0) { e.preventDefault(); controls[controls.length - 1]?.focus(); }
+        else if (!e.shiftKey && index === controls.length - 1) { e.preventDefault(); controls[0]?.focus(); }
+      }
+    };
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => { document.removeEventListener("keydown", onKey); document.body.style.overflow = ""; previousFocus.current?.focus(); };
+  }, [isOpen, images.length]);
+  return <><div className="gallery-grid">{images.map((image,index) => <button className={`gallery-tile gallery-tile--${index % 7}`} key={image.src} type="button" onClick={() => setSelected(index)} aria-label={image.alt}><Image src={image.src} alt={image.alt} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" /></button>)}</div>
+    {selected !== null && <div className="lightbox" role="dialog" aria-modal="true" aria-label={images[selected].alt} onClick={() => setSelected(null)}><button ref={closeRef} className="lightbox-close" type="button" aria-label={locale === "en" ? "Close image" : "Zatvori sliku"} onClick={() => setSelected(null)}><X /></button><button className="lightbox-prev" type="button" aria-label={locale === "en" ? "Previous image" : "Prethodna slika"} onClick={e => {e.stopPropagation(); setSelected((selected - 1 + images.length) % images.length);}}><ChevronLeft /></button><div className="lightbox-image" onClick={e => e.stopPropagation()}><Image src={images[selected].src} alt={images[selected].alt} fill sizes="100vw" /></div><button className="lightbox-next" type="button" aria-label={locale === "en" ? "Next image" : "Sljedeća slika"} onClick={e => {e.stopPropagation(); setSelected((selected + 1) % images.length);}}><ChevronRight /></button><p className="lightbox-count">{selected + 1} / {images.length}</p></div>}
+  </>;
 }
